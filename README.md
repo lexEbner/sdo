@@ -1,4 +1,4 @@
-# Ontology for Time Series and Streaming Data Integration
+# Signal Description Ontology
 
 This repository contains an extensible ontology for semantic integration of time series data. 
 It provides the ontology in different variants, example instance data and the prototype implementation to demonstrate source discovery and interoperability.
