@@ -1,0 +1,108 @@
+---------------------------------------------------------------------------
+  OPC UA
+---------------------------------------------------------------------------
+http://example.org/sdo/abox#Line2_UnitsPerBatch: ns=2;i=112001
+[
+  {
+    "Value": 116,
+    "VariantType": 6,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:03.762877+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:03.762966+00:00",
+    "ServerPicosec": "None"
+  },
+  {
+    "Value": 122,
+    "VariantType": 6,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:04.765003+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:04.765069+00:00",
+    "ServerPicosec": "None"
+  }
+]
+http://example.org/sdo/abox#Press_MaterialTemperature: ns=2;i=111201
+[
+  {
+    "Value": 203.4600067138672,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:03.763356+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:03.763380+00:00",
+    "ServerPicosec": "None"
+  },
+  {
+    "Value": 202.8800048828125,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:04.765398+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:04.765451+00:00",
+    "ServerPicosec": "None"
+  }
+]
+http://example.org/sdo/abox#Press_Pressure: ns=2;i=111202
+[
+  {
+    "Value": 124.5999984741211,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:03.763505+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:03.763524+00:00",
+    "ServerPicosec": "None"
+  },
+  {
+    "Value": 131.89999389648438,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:04.765616+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:04.765648+00:00",
+    "ServerPicosec": "None"
+  }
+]
+http://example.org/sdo/abox#Cutter_BladeSpeed: ns=2;i=111301
+[
+  {
+    "Value": 3343.0,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:03.763630+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:03.763647+00:00",
+    "ServerPicosec": "None"
+  },
+  {
+    "Value": 3340.10009765625,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:04.765846+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:04.765867+00:00",
+    "ServerPicosec": "None"
+  }
+]
+http://example.org/sdo/abox#Cutter_Pressure: ns=2;i=111302
+[
+  {
+    "Value": 120.0,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:03.763764+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:03.763791+00:00",
+    "ServerPicosec": "None"
+  },
+  {
+    "Value": 131.6999969482422,
+    "VariantType": 10,
+    "StatusCode": "StatusCode(value=0)",
+    "SourceTimestamp": "2025-08-24 02:01:04.765966+00:00",
+    "SourcePicosec": "None",
+    "ServerTimestamp": "2025-08-24 02:01:04.765985+00:00",
+    "ServerPicosec": "None"
+  }
+]

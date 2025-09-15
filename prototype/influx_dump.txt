@@ -1,0 +1,216 @@
+---------------------------------------------------------------------------
+  InfluxDB
+---------------------------------------------------------------------------
+http://example.org/sdo/abox#Room1_Temperature
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.930144+00:00",
+    "_stop": "2025-08-24T02:02:02.930144+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 23.38,
+    "Factory": "VIE",
+    "Room": "Room1",
+    "_field": "Temperature",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.930144+00:00",
+    "_stop": "2025-08-24T02:02:02.930144+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 26.25,
+    "Factory": "VIE",
+    "Room": "Room1",
+    "_field": "Temperature",
+    "_measurement": "machine_data"
+  }
+]
+http://example.org/sdo/abox#Extruder_Temperature
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.947150+00:00",
+    "_stop": "2025-08-24T02:02:02.947150+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 241.08,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Extruder",
+    "Room": "Room1",
+    "_field": "MaterialTemperature",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.947150+00:00",
+    "_stop": "2025-08-24T02:02:02.947150+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 237.39,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Extruder",
+    "Room": "Room1",
+    "_field": "MaterialTemperature",
+    "_measurement": "machine_data"
+  }
+]
+http://example.org/sdo/abox#Extruder_Throughput
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.962828+00:00",
+    "_stop": "2025-08-24T02:02:02.962828+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 400.46,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Extruder",
+    "Room": "Room1",
+    "_field": "Throughput",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.962828+00:00",
+    "_stop": "2025-08-24T02:02:02.962828+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 401.84,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Extruder",
+    "Room": "Room1",
+    "_field": "Throughput",
+    "_measurement": "machine_data"
+  }
+]
+http://example.org/sdo/abox#Press_MaterialTemperature
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.981247+00:00",
+    "_stop": "2025-08-24T02:02:02.981247+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 203.75,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Press",
+    "Room": "Room1",
+    "_field": "MaterialTemperature",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.981247+00:00",
+    "_stop": "2025-08-24T02:02:02.981247+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 202.01,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Press",
+    "Room": "Room1",
+    "_field": "MaterialTemperature",
+    "_measurement": "machine_data"
+  }
+]
+http://example.org/sdo/abox#Press_Pressure
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.996292+00:00",
+    "_stop": "2025-08-24T02:02:02.996292+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 125.6,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Press",
+    "Room": "Room1",
+    "_field": "Pressure",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:00.996292+00:00",
+    "_stop": "2025-08-24T02:02:02.996292+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 141.3,
+    "Factory": "VIE",
+    "Line": "Line1",
+    "Machine": "Press",
+    "Room": "Room1",
+    "_field": "Pressure",
+    "_measurement": "machine_data"
+  }
+]
+http://example.org/sdo/abox#Trimmer_Pressure
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:01.011032+00:00",
+    "_stop": "2025-08-24T02:02:03.011032+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 291.14,
+    "Factory": "VIE",
+    "Line": "Line2",
+    "Machine": "Trimmer",
+    "Room": "Room1",
+    "_field": "Pressure",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:01.011032+00:00",
+    "_stop": "2025-08-24T02:02:03.011032+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 291.65,
+    "Factory": "VIE",
+    "Line": "Line2",
+    "Machine": "Trimmer",
+    "Room": "Room1",
+    "_field": "Pressure",
+    "_measurement": "machine_data"
+  }
+]
+http://example.org/sdo/abox#Trimmer_ZPosition
+[
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:01.030815+00:00",
+    "_stop": "2025-08-24T02:02:03.030815+00:00",
+    "_time": "2025-08-24T02:02:01.534429+00:00",
+    "_value": 10.5,
+    "Factory": "VIE",
+    "Line": "Line2",
+    "Machine": "Trimmer",
+    "Room": "Room1",
+    "_field": "ZPosition",
+    "_measurement": "machine_data"
+  },
+  {
+    "result": "_result",
+    "table": 0,
+    "_start": "2025-08-24T02:02:01.030815+00:00",
+    "_stop": "2025-08-24T02:02:03.030815+00:00",
+    "_time": "2025-08-24T02:02:02.546850+00:00",
+    "_value": 9.0,
+    "Factory": "VIE",
+    "Line": "Line2",
+    "Machine": "Trimmer",
+    "Room": "Room1",
+    "_field": "ZPosition",
+    "_measurement": "machine_data"
+  }
+]
