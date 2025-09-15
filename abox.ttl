@@ -1,0 +1,491 @@
+@prefix : <http://example.org/sdo/abox#> .
+@prefix core: <http://example.org/sdo/core#> .
+@prefix opcua: <http://example.org/sdo/opcua#> .
+@prefix influxdb: <http://example.org/sdo/influxdb#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/sdo/abox#> a owl:Ontology ;
+       owl:imports <http://example.org/sdo#> .
+
+#################################################################
+#    Tags
+#################################################################
+
+:Tag_FactoryVIE a influxdb:Tag ;
+       core:hasKey "Factory" ;
+       core:hasValue "VIE" .
+
+:Tag_Room1 a influxdb:Tag ;
+       core:hasKey "Room" ;
+       core:hasValue "Room1" .
+
+:Tag_Line1 a influxdb:Tag ;
+       core:hasKey "Line" ;
+       core:hasValue "Line1" .
+
+:Tag_Line2 a influxdb:Tag ;
+       core:hasKey "Line" ;
+       core:hasValue "Line2" .
+
+:Tag_Extruder a influxdb:Tag ;
+       core:hasKey "Machine" ;
+       core:hasValue "Extruder" .
+
+:Tag_Press a influxdb:Tag ;
+       core:hasKey "Machine" ;
+       core:hasValue "Press" .
+
+:Tag_Trimmer a influxdb:Tag ;
+       core:hasKey "Machine" ;
+       core:hasValue "Trimmer" .
+
+#################################################################
+#    ConnectionInformation
+#################################################################
+
+###  http://example.org/sdo#InfluxDbConnection1
+:InfluxDbConnection1 a influxdb:InfluxDbConnectionInfo ;
+       core:hasURL "http://127.0.0.1:8086"^^xsd:anyURI  ;
+       core:hasCredentials [
+              a core:TokenCredentials ;
+              core:hasToken "RDHByh4KFzx5ESBzebaP9UzhSHd2FvQseZvypwTJWUNFG_hfshHclChF9o-dJSF0KEeexqwkAZcTwr5Kr6gAHA=="
+       ] ;
+       influxdb:hasBucket "manufacturing" ;
+       influxdb:hasOrganization "TUWien" .
+
+_:CertCredentials1 a core:CertCredentials ;
+       core:hasCertURI "./certificates/client-certificate.der"^^xsd:anyURI ;
+       core:hasPrivateKeyURI  "./certificates/client-private-key.pem"^^xsd:anyURI .
+
+###  http://example.org/sdo#OpcUaConnection1
+:OpcUaConnection1 a opcua:OpcUaConnectionInfo ;
+       core:hasURL "opc.tcp://127.0.0.1:4840/server1/"^^xsd:anyURI ;
+       core:hasCredentials [
+              a core:UserPassCredentials ;
+              core:hasUsername "admin" ;
+              core:hasPassword "PWD@server1"
+       ] ;
+       core:hasCredentials _:CertCredentials1 ;
+       opcua:hasMessageSecurity [
+              a opcua:MessageSecuriy ;
+              opcua:hasSecurityPolicy "Aes128Sha256RsaOaep" ;
+              opcua:hasMode "SignAndEncrypt"^^opcua:mode ;
+              opcua:hasServerCertURI "./certificates/server-certificate.der"^^xsd:anyURI ;
+              opcua:hasClientCertCredentials _:CertCredentials1
+       ] .
+
+###  http://example.org/sdo#OpcUaConnection2
+:OpcUaConnection2 a opcua:OpcUaConnectionInfo ;
+       core:hasURL "opc.tcp://127.0.0.1:4840/server2/"^^xsd:anyURI ;
+       core:hasCredentials [
+              a core:UserPassCredentials ;
+              core:hasUsername "admin" ;
+              core:hasPassword "PWD@server2"
+       ] .
+
+#################################################################
+#    Hierarchy Assets
+#################################################################
+
+###  http://example.org/sdo#FactoryVIE
+:FactoryVIE a core:Asset ;
+       rdfs:label "FactoryVIE" ;
+       core:hasAsset :Room1 .
+
+###  http://example.org/sdo#Room1
+:Room1 a core:Asset ;
+       rdfs:label "Room1" ;
+       core:hasAsset :Line1, :Line2 ;
+       core:hasSignalDescription :Room1_Temperature .
+
+###  http://example.org/sdo#Room1_Temperature
+:Room1_Temperature a core:SignalDescription ;
+       rdfs:label "Temperature" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "10.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "30.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:DEG_C ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "Observations"^^core:signalType ;
+       core:hasHistAccess [
+              a influxdb:InfluxDbAccess ;
+              influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+              influxdb:hasMeasurement "machine_data" ;
+              influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1 ;
+              influxdb:hasField "Temperature"
+       ] .
+
+###  http://example.org/sdo#Line1
+:Line1 a core:Asset ;
+       rdfs:label "Line1" ;
+       core:hasAsset :Cutter, :Extruder, :Press .
+
+###  http://example.org/sdo#Line2
+:Line2 a core:Asset ;
+       rdfs:label "Line2" ;
+       core:hasAsset :Belt, :Trimmer ;
+       core:hasSignalDescription :Line2_UnitsPerBatch .
+
+###  http://example.org/sdo#Line2_UnitsPerBatch
+:Line2_UnitsPerBatch a core:SignalDescription ;
+       rdfs:label "UnitsPerBatch" ;
+       core:hasUnit unit:ONE ;
+       core:hasDatatype xsd:integer ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasNrtAccess _:OpcUA_Prop5 ;
+       core:hasHistAccess _:OpcUA_Prop5 .
+
+_:OpcUA_Prop5 a opcua:OpcUaAccess ;
+       opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+       opcua:hasNamespaceURI "http://example.org/opcua/" ;
+       opcua:hasIdentifier "112001"^^xsd:integer .
+
+#################################################################
+#    Extruder
+#################################################################
+
+###  http://example.org/sdo#Extruder
+:Extruder a core:Asset ;
+       rdfs:label "Extruder" ;
+       core:hasSignalDescription :Extruder_Temperature, :Extruder_Throughput .
+
+###  http://example.org/sdo#Extruder_Temperature
+:Extruder_Temperature a core:SignalDescription ;
+       rdfs:label "Temperature" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "50.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "100.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:DEG_C ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasNrtAccess [
+              a opcua:OpcUaAccess ;
+              opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+              opcua:hasNamespaceURI "http://example.org/opcua/" ;
+              opcua:hasIdentifier "111101"^^xsd:integer
+       ] ;
+       core:hasHistAccess [
+              a influxdb:InfluxDbAccess ;
+              influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+              influxdb:hasMeasurement "machine_data" ;
+              influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line1, :Tag_Extruder ;
+              influxdb:hasField "Temperature"
+       ] .
+
+###  http://example.org/sdo#Extruder_Throughput
+:Extruder_Throughput a core:SignalDescription ;
+       rdfs:label "Throughput" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "350.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "450.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:KiloGM-PER-HR ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasNrtAccess [
+              a opcua:OpcUaAccess ;
+              opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+              opcua:hasNamespaceURI "http://example.org/opcua/" ;
+              opcua:hasIdentifier "111102"^^xsd:integer
+       ] ;
+       core:hasHistAccess [
+              a influxdb:InfluxDbAccess ;
+              influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+              influxdb:hasMeasurement "machine_data" ;
+              influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line1, :Tag_Extruder ;
+              influxdb:hasField "Throughput"
+       ] .
+
+
+#################################################################
+#    Press
+#################################################################
+
+###  http://example.org/sdo#Press
+:Press a core:Asset ;
+       rdfs:label "Press" ;
+       core:hasSignalDescription :Press_MaterialTemperature, :Press_Pressure .
+
+###  http://example.org/sdo#Press_MaterialTemperature
+:Press_MaterialTemperature a core:SignalDescription ;
+       rdfs:label "MaterialTemperature" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "150.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "250.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:DEG_C ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "LinearInterpolation"^^core:signalType ;
+       core:hasNrtAccess _:OpcUA_Prop1 ;
+       core:hasHistAccess _:OpcUA_Prop1, _:InfluxDB_Prop1 .
+
+_:OpcUA_Prop1 a opcua:OpcUaAccess ;
+       opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+       opcua:hasNamespaceURI "http://example.org/opcua/" ;
+       opcua:hasIdentifier "111201"^^xsd:integer .
+
+_:InfluxDB_Prop1 a influxdb:InfluxDbAccess ;
+       influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+       influxdb:hasMeasurement "machine_data" ;
+       influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line1, :Tag_Press ;
+       influxdb:hasField "MaterialTemperature" .
+
+###  http://example.org/sdo#Press_Pressure
+:Press_Pressure a core:SignalDescription ;
+       rdfs:label "Pressure" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "100.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "200.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:BAR ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasNrtAccess _:OpcUA_Prop2 ;
+       core:hasHistAccess _:OpcUA_Prop2, _:InfluxDB_Prop2 .
+
+_:OpcUA_Prop2 a opcua:OpcUaAccess ;
+       opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+       opcua:hasNamespaceURI "http://example.org/opcua/" ;
+       opcua:hasIdentifier "111202"^^xsd:integer .
+
+_:InfluxDB_Prop2 a influxdb:InfluxDbAccess ;
+       influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+       influxdb:hasMeasurement "machine_data" ;
+       influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line1, :Tag_Press ;
+       influxdb:hasField "Pressure" .
+
+#################################################################
+#    Cutter
+#################################################################
+
+###  http://example.org/sdo#Cutter
+:Cutter a core:Asset ;
+       rdfs:label "Cutter" ;
+       core:hasSignalDescription :Cutter_BladeSpeed, :Cutter_Pressure .
+
+###  http://example.org/sdo#Cutter_BladeSpeed
+:Cutter_BladeSpeed a core:SignalDescription ;
+       rdfs:label "BladeSpeed" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "3000.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "3500.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:REV-PER-MIN ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "Observations"^^core:signalType ;
+       core:hasNrtAccess _:OpcUA_Prop3 ;
+       core:hasHistAccess _:OpcUA_Prop3 .
+
+_:OpcUA_Prop3 a opcua:OpcUaAccess ;
+       opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+       opcua:hasNamespaceURI "http://example.org/opcua/" ;
+       opcua:hasIdentifier "111301"^^xsd:integer .
+
+###  http://example.org/sdo#Cutter_Pressure
+:Cutter_Pressure a core:SignalDescription ;
+       rdfs:label "Pressure" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "100.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "150.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:BAR ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasNrtAccess _:OpcUA_Prop4 ;
+       core:hasHistAccess _:OpcUA_Prop4 .
+
+_:OpcUA_Prop4 a opcua:OpcUaAccess ;
+       opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+       opcua:hasNamespaceURI "http://example.org/opcua/" ;
+       opcua:hasIdentifier "111302"^^xsd:integer .
+
+#################################################################
+#    Belt
+#################################################################
+
+###  http://example.org/sdo#Belt
+:Belt a core:Asset ;
+       rdfs:label "Belt" ;
+       core:hasSignalDescription :Belt_Speed .
+
+###  http://example.org/sdo#Belt_Speed
+:Belt_Speed a core:SignalDescription ;
+       rdfs:label "Speed" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "10.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "25.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:M-PER-MIN ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "LinearInterpolation"^^core:signalType ;
+       core:hasNrtAccess [
+              a opcua:OpcUaAccess ;
+              opcua:hasOpcUaConnectionInfo :OpcUaConnection1 ;
+              opcua:hasNamespaceURI "http://example.org/opcua/" ;
+              opcua:hasIdentifier "112101"^^xsd:integer
+       ] .
+
+#################################################################
+#    Trimmer
+#################################################################
+
+###  http://example.org/sdo#Trimmer
+:Trimmer a core:Asset ;
+       rdfs:label "Trimmer" ;
+       core:hasSignalDescription :Trimmer_Speed, :Trimmer_Pressure, :Trimmer_ZPosition .
+
+###  http://example.org/sdo#Trimmer_Speed
+:Trimmer_Speed a core:SignalDescription ;
+       rdfs:label "Speed" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "6000.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "6500.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:REV-PER-MIN ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "LinearInterpolation"^^core:signalType .
+
+###  http://example.org/sdo#Trimmer_Pressure
+:Trimmer_Pressure a core:SignalDescription ;
+       rdfs:label "Pressure" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "250.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "350.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:BAR ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasHistAccess [
+              a influxdb:InfluxDbAccess ;
+              influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+              influxdb:hasMeasurement "machine_data" ;
+              influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line2, :Tag_Trimmer ;
+              influxdb:hasField "Pressure"
+       ] .
+
+###  http://example.org/sdo#Trimmer_ZPosition
+:Trimmer_ZPosition a core:SignalDescription ;
+       rdfs:label "ZPosition" ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Min" ;
+              core:hasValue "0.0"^^xsd:double
+       ] ;
+       core:hasMetaData [
+              a core:MetaData ;
+              core:hasKey "Max" ;
+              core:hasValue "15.0"^^xsd:double
+       ] ;
+       core:hasUnit unit:MilliM ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "Observations"^^core:signalType ;
+       core:hasHistAccess [
+              a influxdb:InfluxDbAccess ;
+              influxdb:hasInfluxDbConnectionInfo :InfluxDbConnection1 ;
+              influxdb:hasMeasurement "machine_data" ;
+              influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line2, :Tag_Trimmer ;
+              influxdb:hasField "ZPosition"
+       ] .
+
+#################################################################
+#    Centrifuge
+#################################################################
+
+###  http://example.org/sdo#Centrifuge
+:Centrifuge a core:Asset ;
+       rdfs:label "Centrifuge" ;
+       core:hasSignalDescription :Centrifuge_Speed, :Centrifuge_Acceleration .
+
+###  http://example.org/sdo#Centrifuge_Speed
+:Centrifuge_Speed a core:SignalDescription ;
+       rdfs:label "Speed" ;
+       core:hasUnit unit:REV-PER-MIN ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "Observations"^^core:signalType ;
+       core:hasSignalType "HoldObservations"^^core:signalType ;
+       core:hasNrtAccess [
+              a opcua:OpcUaAccess ;
+              opcua:hasOpcUaConnectionInfo :OpcUaConnection2 ;
+              opcua:hasNamespaceIndex "2"^^xsd:integer ;
+              opcua:hasIdentifier "Centrifuge_Speed"
+       ] .
+
+###  http://example.org/sdo#Centrifuge_Acceleration
+:Centrifuge_Acceleration a core:SignalDescription ;
+       rdfs:label "Acceleration" ;
+       core:hasUnit unit:REV-PER-MIN-SEC ;
+       core:hasDatatype xsd:double ;
+       core:hasSignalType "Observations"^^core:signalType ;
+       core:hasNrtAccess [
+              a opcua:OpcUaAccess ;
+              opcua:hasOpcUaConnectionInfo :OpcUaConnection2 ;
+              opcua:hasNamespaceIndex "2"^^xsd:integer ;
+              opcua:hasIdentifier "C496578A-0DFE-4B8F-870A-745238C6AEAE"
+       ] .
