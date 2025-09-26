@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<style>
+   .drawing {
+      width: 100%;
+      height: auto;
+      display: block;
+      min-width: 800px;
+      max-width: 1500px;
+   }
+   .drawing-wrapper {
+      display: flex;
+      justify-content: center;
+      overflow: auto;
+   }
+</style>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Signal Description Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://example.org/sdo#","image":"resources/onto_drawing.svg","name":"Signal Description Ontology", "headline":"T.b.d.", "dateReleased":"2025-09-25", "version":"0.1", "license":"https://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/lexEbner/sdo", "author":[{"@type":"Person","name":"Alexander Ebner"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Signal Description Ontology</h1>
+<h2>Release: 2025-09-25</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://example.org/sdo#">http://example.org/sdo#</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://example.org/sdo#">http://example.org/sdo#</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Authors:</dt>
+<dd>Alexander Ebner, TU Wien <a href="mailto:e11807860@student.tuwien.ac.at">✉</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<dt>Cite as:</dt>
+<dd>AlexanderEbner. Signal Description Ontology. Revision: 0.1.</dd>
+<dt>Vocabulary maintained at:</dt>
+<dd><a href="https://github.com/lexEbner/sdo">https://github.com/lexEbner/sdo</a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+T.b.d.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">T.b.d.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Signal Description Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#CertCredentials" title="http://example.org/sdo/core#CertCredentials">Cert Credentials</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#Datatype" title="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo"
+         title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#KeyValuePair" title="http://example.org/sdo/core#KeyValuePair">Key-Value Pair</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#MetaData" title="http://example.org/sdo/core#MetaData">Meta Data</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo"
+         title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#Tag" title="http://example.org/sdo/influxdb#Tag">Tag</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#TokenCredentials" title="http://example.org/sdo/core#TokenCredentials">Token Credentials</a>
+   </li>
+   <li>
+      <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#UserPassCredentials" title="http://example.org/sdo/core#UserPassCredentials">User Pass Credentials</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/sdo/core#hasAsset" title="http://example.org/sdo/core#hasAsset">has asset</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasCredentials" title="http://example.org/sdo/core#hasCredentials">has credentials</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasDataType" title="http://example.org/sdo/core#hasDataType">has data type</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasHistAccess" title="http://example.org/sdo/core#hasHistAccess">has historical access</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo"
+         title="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">has InfluxDB connection information</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasMessageSecurity" title="http://example.org/sdo/opcua#hasMessageSecurity">has message security</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasMetadata" title="http://example.org/sdo/core#hasMetadata">has metadata</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasNrtAccess" title="http://example.org/sdo/core#hasNrtAccess">has near real-time access</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasOpcUaConnectionInfo"
+         title="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">has OPC UA connection information</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasSignalDescription" title="http://example.org/sdo/core#hasSignalDescription">has signal description</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#hasTag" title="http://example.org/sdo/influxdb#hasTag">has tag</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasUnit" title="http://example.org/sdo/core#hasUnit">has unit</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isAssetOf" title="http://example.org/sdo/core#isAssetOf">is asset of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isCredentialsOf" title="http://example.org/sdo/core#isCredentialsOf">is credentials of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isDataTypeOf" title="http://example.org/sdo/core#isDataTypeOf">is data type of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isHistAccessOf" title="http://example.org/sdo/core#isHistAccessOf">is historical access of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf"
+         title="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">is InfluxDB connection information of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#isMessageSecurityOf" title="http://example.org/sdo/opcua#isMessageSecurityOf">is message security of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isMetadataOf" title="http://example.org/sdo/core#isMetadataOf">is metadata of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isNrtAccessOf" title="http://example.org/sdo/core#isNrtAccessOf">is near real-time access of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#isOpcUaConnectionInfoOf"
+         title="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">is OPC UA connection information of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isSignalDescriptionOf"
+         title="http://example.org/sdo/core#isSignalDescriptionOf">is signal description of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#isTagOf" title="http://example.org/sdo/influxdb#isTagOf">is tag of</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#isUnitOf" title="http://example.org/sdo/core#isUnitOf">is unit of</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://example.org/sdo/influxdb#hasBucket" title="http://example.org/sdo/influxdb#hasBucket">has bucket</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasCert" title="http://example.org/sdo/core#hasCert">has certificate</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasClientCert" title="http://example.org/sdo/opcua#hasClientCert">has client certificate</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasClientPrivateKey" title="http://example.org/sdo/opcua#hasClientPrivateKey">has client private key</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#hasField" title="http://example.org/sdo/influxdb#hasField">has field</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasIdentifier" title="http://example.org/sdo/opcua#hasIdentifier">has identifier</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasKey" title="http://example.org/sdo/core#hasKey">has key</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#hasMeasurement" title="http://example.org/sdo/influxdb#hasMeasurement">has measurement</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasMode" title="http://example.org/sdo/opcua#hasMode">has mode</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasNamespaceIndex" title="http://example.org/sdo/opcua#hasNamespaceIndex">has namespace index</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasNamespaceURI" title="http://example.org/sdo/opcua#hasNamespaceURI">has namespace URI</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/influxdb#hasOrganization" title="http://example.org/sdo/influxdb#hasOrganization">has organization</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasPassword" title="http://example.org/sdo/core#hasPassword">has password</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasPrivateKey" title="http://example.org/sdo/core#hasPrivateKey">has private key</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasSecurityPolicy" title="http://example.org/sdo/opcua#hasSecurityPolicy">has security policy</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasServerCert" title="http://example.org/sdo/opcua#hasServerCert">has server certificate</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/opcua#hasServerIndex" title="http://example.org/sdo/opcua#hasServerIndex">has server index</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasSignalType" title="http://example.org/sdo/core#hasSignalType">has signal type</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasToken" title="http://example.org/sdo/core#hasToken">has token</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasURL" title="http://example.org/sdo/core#hasURL">has URL</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasUsername" title="http://example.org/sdo/core#hasUsername">has username</a>
+   </li>
+   <li>
+      <a href="#http://example.org/sdo/core#hasValue" title="http://example.org/sdo/core#hasValue">has value</a>
+   </li>
+</ul>
+<div class="drawing-wrapper">
+   <img src="resources/onto_drawing.svg" alt="Visualized Ontology" class="drawing"/>
+</div>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Signal Description Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">An ontology for integrating data sources providing time series data based on signal descriptions.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Signal Description Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Signal Description Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a></li>
+  <li><a href="#http://example.org/sdo/core#CertCredentials" title="http://example.org/sdo/core#CertCredentials">Cert Credentials</a></li>
+  <li><a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a></li>
+  <li><a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a></li>
+  <li><a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#Datatype" title="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a></li>
+  <li><a href="#http://example.org/sdo/core#KeyValuePair" title="http://example.org/sdo/core#KeyValuePair">Key-Value Pair</a></li>
+  <li><a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a></li>
+  <li><a href="#http://example.org/sdo/core#MetaData" title="http://example.org/sdo/core#MetaData">Meta Data</a></li>
+  <li><a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a></li>
+  <li><a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo" title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a></li>
+  <li><a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#Tag" title="http://example.org/sdo/influxdb#Tag">Tag</a></li>
+  <li><a href="#http://example.org/sdo/core#TokenCredentials" title="http://example.org/sdo/core#TokenCredentials">Token Credentials</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a></li>
+  <li><a href="#http://example.org/sdo/core#UserPassCredentials" title="http://example.org/sdo/core#UserPassCredentials">User Pass Credentials</a></li>
+ </ul>
+ <div class="entity" id="http://example.org/sdo/core#Asset">
+  <h3>Asset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#Asset</p>
+  <div class="comment">
+   <span class="markdown">Represents a physical or logical object that provides signals or contains other assets.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasAsset" title="http://example.org/sdo/core#hasAsset">has asset</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#hasSignalDescription" title="http://example.org/sdo/core#hasSignalDescription">has signal description</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isAssetOf" title="http://example.org/sdo/core#isAssetOf">is asset of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasAsset" title="http://example.org/sdo/core#hasAsset">has asset</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isAssetOf" title="http://example.org/sdo/core#isAssetOf">is asset of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isSignalDescriptionOf" title="http://example.org/sdo/core#isSignalDescriptionOf">is signal description of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#CertCredentials">
+  <h3>Cert Credentials<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#CertCredentials</p>
+  <div class="comment">
+   <span class="markdown">Represents authentication using certificates.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasCert" title="http://example.org/sdo/core#hasCert">has certificate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/core#hasPrivateKey" title="http://example.org/sdo/core#hasPrivateKey">has private key</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#ConnectionInfo">
+  <h3>Connection Info<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#ConnectionInfo</p>
+  <div class="comment">
+   <span class="markdown">Contains the information required to connect to a source.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo" title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasURL" title="http://example.org/sdo/core#hasURL">has URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/core#hasCredentials" title="http://example.org/sdo/core#hasCredentials">has credentials</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#isCredentialsOf" title="http://example.org/sdo/core#isCredentialsOf">is credentials of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#Credentials">
+  <h3>Credentials<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#Credentials</p>
+  <div class="comment">
+   <span class="markdown">Serves as supertype for different authentication methods.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#CertCredentials" title="http://example.org/sdo/core#CertCredentials">Cert Credentials</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/sdo/core#TokenCredentials" title="http://example.org/sdo/core#TokenCredentials">Token Credentials</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/sdo/core#UserPassCredentials" title="http://example.org/sdo/core#UserPassCredentials">User Pass Credentials</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#isCredentialsOf" title="http://example.org/sdo/core#isCredentialsOf">is credentials of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasCredentials" title="http://example.org/sdo/core#hasCredentials">has credentials</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#DataAccess">
+  <h3>Data Access<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#DataAccess</p>
+  <div class="comment">
+   <span class="markdown">Serves as supertype for technology-specific types of data access, used to obtain signal values.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#isHistAccessOf" title="http://example.org/sdo/core#isHistAccessOf">is historical access of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isNrtAccessOf" title="http://example.org/sdo/core#isNrtAccessOf">is near real-time access of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasHistAccess" title="http://example.org/sdo/core#hasHistAccess">has historical access</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#hasNrtAccess" title="http://example.org/sdo/core#hasNrtAccess">has near real-time access</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#Datatype">
+  <h3>Datatype<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#Datatype</p>
+  <div class="comment">
+   <span class="markdown">Refers to a RDFS Datatype</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#isDataTypeOf" title="http://example.org/sdo/core#isDataTypeOf">is data type of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasDataType" title="http://example.org/sdo/core#hasDataType">has data type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#InfluxDbAccess">
+  <h3>Influx Db Access<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#InfluxDbAccess</p>
+  <div class="comment">
+   <span class="markdown">Contains the information used to query InfluxDB points.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">has InfluxDB connection information</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/influxdb#hasField" title="http://example.org/sdo/influxdb#hasField">has field</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/influxdb#hasMeasurement" title="http://example.org/sdo/influxdb#hasMeasurement">has measurement</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/influxdb#hasTag" title="http://example.org/sdo/influxdb#hasTag">has tag</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf" title="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">is InfluxDB connection information of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/influxdb#isTagOf" title="http://example.org/sdo/influxdb#isTagOf">is tag of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">
+  <h3>Influx Db Connection Info<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#InfluxDbConnectionInfo</p>
+  <div class="comment">
+   <span class="markdown">Contains the information required to connect to an InfluxDB server.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#hasBucket" title="http://example.org/sdo/influxdb#hasBucket">has bucket</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/influxdb#hasOrganization" title="http://example.org/sdo/influxdb#hasOrganization">has organization</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf" title="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">is InfluxDB connection information of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">has InfluxDB connection information</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#KeyValuePair">
+  <h3>Key-Value Pair<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#KeyValuePair</p>
+  <div class="comment">
+   <span class="markdown">Represents data the in form of a key and a value.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#MetaData" title="http://example.org/sdo/core#MetaData">Meta Data</a> <sup class="type-c" title="class">c</sup>, <a href="#http://example.org/sdo/influxdb#Tag" title="http://example.org/sdo/influxdb#Tag">Tag</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasKey" title="http://example.org/sdo/core#hasKey">has key</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/core#hasValue" title="http://example.org/sdo/core#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#MessageSecurity">
+  <h3>Message Security<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#MessageSecurity</p>
+  <div class="comment">
+   <span class="markdown">Contains the information required to establish a secure channel in OPC UA.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/opcua#hasClientCert" title="http://example.org/sdo/opcua#hasClientCert">has client certificate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasClientPrivateKey" title="http://example.org/sdo/opcua#hasClientPrivateKey">has client private key</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasMode" title="http://example.org/sdo/opcua#hasMode">has mode</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasSecurityPolicy" title="http://example.org/sdo/opcua#hasSecurityPolicy">has security policy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasServerCert" title="http://example.org/sdo/opcua#hasServerCert">has server certificate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#isMessageSecurityOf" title="http://example.org/sdo/opcua#isMessageSecurityOf">is message security of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/opcua#hasMessageSecurity" title="http://example.org/sdo/opcua#hasMessageSecurity">has message security</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#MetaData">
+  <h3>Meta Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#MetaData</p>
+  <div class="comment">
+   <span class="markdown">A key-value pair that adds information about a signal.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#KeyValuePair" title="http://example.org/sdo/core#KeyValuePair">Key-Value Pair</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#isMetadataOf" title="http://example.org/sdo/core#isMetadataOf">is metadata of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasMetadata" title="http://example.org/sdo/core#hasMetadata">has metadata</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#OpcUaAccess">
+  <h3>Opc Ua Access<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#OpcUaAccess</p>
+  <div class="comment">
+   <span class="markdown">Contains the information used to access OPC UA nodes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/opcua#hasOpcUaConnectionInfo" title="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">has OPC UA connection information</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/opcua#hasIdentifier" title="http://example.org/sdo/opcua#hasIdentifier">has identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasNamespaceURI" title="http://example.org/sdo/opcua#hasNamespaceURI">has namespace URI</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasNamespaceIndex" title="http://example.org/sdo/opcua#hasNamespaceIndex">has namespace index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/opcua#hasServerIndex" title="http://example.org/sdo/opcua#hasServerIndex">has server index</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/opcua#isOpcUaConnectionInfoOf" title="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">is OPC UA connection information of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#OpcUaConnectionInfo">
+  <h3>Opc Ua Connection Info<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#OpcUaConnectionInfo</p>
+  <div class="comment">
+   <span class="markdown">Contains the information required to connect to an OPC UA server.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/opcua#hasMessageSecurity" title="http://example.org/sdo/opcua#hasMessageSecurity">has message security</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/opcua#isOpcUaConnectionInfoOf" title="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">is OPC UA connection information of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/opcua#hasOpcUaConnectionInfo" title="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">has OPC UA connection information</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/opcua#isMessageSecurityOf" title="http://example.org/sdo/opcua#isMessageSecurityOf">is message security of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#SignalDescription">
+  <h3>Signal Description<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#SignalDescription</p>
+  <div class="comment">
+   <span class="markdown">Contains the information to enable interpretation and data access of a signal.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasDataType" title="http://example.org/sdo/core#hasDataType">has data type</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#hasHistAccess" title="http://example.org/sdo/core#hasHistAccess">has historical access</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#hasMetadata" title="http://example.org/sdo/core#hasMetadata">has metadata</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#hasNrtAccess" title="http://example.org/sdo/core#hasNrtAccess">has near real-time access</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#hasSignalType" title="http://example.org/sdo/core#hasSignalType">has signal type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/core#hasUnit" title="http://example.org/sdo/core#hasUnit">has unit</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isSignalDescriptionOf" title="http://example.org/sdo/core#isSignalDescriptionOf">is signal description of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasSignalDescription" title="http://example.org/sdo/core#hasSignalDescription">has signal description</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isDataTypeOf" title="http://example.org/sdo/core#isDataTypeOf">is data type of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isHistAccessOf" title="http://example.org/sdo/core#isHistAccessOf">is historical access of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isMetadataOf" title="http://example.org/sdo/core#isMetadataOf">is metadata of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isNrtAccessOf" title="http://example.org/sdo/core#isNrtAccessOf">is near real-time access of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://example.org/sdo/core#isUnitOf" title="http://example.org/sdo/core#isUnitOf">is unit of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#Tag">
+  <h3>Tag<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#Tag</p>
+  <div class="comment">
+   <span class="markdown">A key-value pair used to query points in InfluxDB.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#KeyValuePair" title="http://example.org/sdo/core#KeyValuePair">Key-Value Pair</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#isTagOf" title="http://example.org/sdo/influxdb#isTagOf">is tag of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/influxdb#hasTag" title="http://example.org/sdo/influxdb#hasTag">has tag</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#TokenCredentials">
+  <h3>Token Credentials<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#TokenCredentials</p>
+  <div class="comment">
+   <span class="markdown">Represents authentication based on tokens.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasToken" title="http://example.org/sdo/core#hasToken">has token</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/Unit">
+  <h3>Unit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/Unit</p>
+  <div class="comment">
+   <span class="markdown">Refers to a QUDT Unit</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#isUnitOf" title="http://example.org/sdo/core#isUnitOf">is unit of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasUnit" title="http://example.org/sdo/core#hasUnit">has unit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#UserPassCredentials">
+  <h3>User Pass Credentials<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#UserPassCredentials</p>
+  <div class="comment">
+   <span class="markdown">Represents authentication based on username and password.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://example.org/sdo/core#hasPassword" title="http://example.org/sdo/core#hasPassword">has password</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://example.org/sdo/core#hasUsername" title="http://example.org/sdo/core#hasUsername">has username</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/sdo/core#hasAsset" title="http://example.org/sdo/core#hasAsset">has asset</a></li>
+  <li><a href="#http://example.org/sdo/core#hasCredentials" title="http://example.org/sdo/core#hasCredentials">has credentials</a></li>
+  <li><a href="#http://example.org/sdo/core#hasDataType" title="http://example.org/sdo/core#hasDataType">has data type</a></li>
+  <li><a href="#http://example.org/sdo/core#hasHistAccess" title="http://example.org/sdo/core#hasHistAccess">has historical access</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">has InfluxDB connection information</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasMessageSecurity" title="http://example.org/sdo/opcua#hasMessageSecurity">has message security</a></li>
+  <li><a href="#http://example.org/sdo/core#hasMetadata" title="http://example.org/sdo/core#hasMetadata">has metadata</a></li>
+  <li><a href="#http://example.org/sdo/core#hasNrtAccess" title="http://example.org/sdo/core#hasNrtAccess">has near real-time access</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasOpcUaConnectionInfo" title="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">has OPC UA connection information</a></li>
+  <li><a href="#http://example.org/sdo/core#hasSignalDescription" title="http://example.org/sdo/core#hasSignalDescription">has signal description</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#hasTag" title="http://example.org/sdo/influxdb#hasTag">has tag</a></li>
+  <li><a href="#http://example.org/sdo/core#hasUnit" title="http://example.org/sdo/core#hasUnit">has unit</a></li>
+  <li><a href="#http://example.org/sdo/core#isAssetOf" title="http://example.org/sdo/core#isAssetOf">is asset of</a></li>
+  <li><a href="#http://example.org/sdo/core#isCredentialsOf" title="http://example.org/sdo/core#isCredentialsOf">is credentials of</a></li>
+  <li><a href="#http://example.org/sdo/core#isDataTypeOf" title="http://example.org/sdo/core#isDataTypeOf">is data type of</a></li>
+  <li><a href="#http://example.org/sdo/core#isHistAccessOf" title="http://example.org/sdo/core#isHistAccessOf">is historical access of</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf" title="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">is InfluxDB connection information of</a></li>
+  <li><a href="#http://example.org/sdo/opcua#isMessageSecurityOf" title="http://example.org/sdo/opcua#isMessageSecurityOf">is message security of</a></li>
+  <li><a href="#http://example.org/sdo/core#isMetadataOf" title="http://example.org/sdo/core#isMetadataOf">is metadata of</a></li>
+  <li><a href="#http://example.org/sdo/core#isNrtAccessOf" title="http://example.org/sdo/core#isNrtAccessOf">is near real-time access of</a></li>
+  <li><a href="#http://example.org/sdo/opcua#isOpcUaConnectionInfoOf" title="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">is OPC UA connection information of</a></li>
+  <li><a href="#http://example.org/sdo/core#isSignalDescriptionOf" title="http://example.org/sdo/core#isSignalDescriptionOf">is signal description of</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#isTagOf" title="http://example.org/sdo/influxdb#isTagOf">is tag of</a></li>
+  <li><a href="#http://example.org/sdo/core#isUnitOf" title="http://example.org/sdo/core#isUnitOf">is unit of</a></li>
+ </ul>
+ <div class="entity" id="http://example.org/sdo/core#hasAsset">
+  <h3>has asset<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasAsset</p>
+  <div class="comment">
+   <span class="markdown">Links an Asset to another Asset it contains to.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isAssetOf" title="http://example.org/sdo/core#isAssetOf">is asset of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasCredentials">
+  <h3>has credentials<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasCredentials</p>
+  <div class="comment">
+   <span class="markdown">Links Credentials to a ConnectionInfo providing it for authentication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isCredentialsOf" title="http://example.org/sdo/core#isCredentialsOf">is credentials of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasDataType">
+  <h3>has data type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasDataType</p>
+  <div class="comment">
+   <span class="markdown">Links a Datatype to a SignalDescription it refers to.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2000/01/rdf-schema#Datatype" title="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isDataTypeOf" title="http://example.org/sdo/core#isDataTypeOf">is data type of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasHistAccess">
+  <h3>has historical access<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasHistAccess</p>
+  <div class="comment">
+   <span class="markdown">Links historical DataAccess to a SignalDescription providing it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isHistAccessOf" title="http://example.org/sdo/core#isHistAccessOf">is historical access of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">
+  <h3>has InfluxDB connection information<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo</p>
+  <div class="comment">
+   <span class="markdown">Links connection information to InfluxDB Access requiring it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf" title="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">is InfluxDB connection information of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasMessageSecurity">
+  <h3>has message security<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasMessageSecurity</p>
+  <div class="comment">
+   <span class="markdown">Links MessageSecurity to OpcUaConnectionInfo requiring it for secure communication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo" title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#isMessageSecurityOf" title="http://example.org/sdo/opcua#isMessageSecurityOf">is message security of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasMetadata">
+  <h3>has metadata<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasMetadata</p>
+  <div class="comment">
+   <span class="markdown">Links a metadata to a SignalDescription described by</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#MetaData" title="http://example.org/sdo/core#MetaData">Meta Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isMetadataOf" title="http://example.org/sdo/core#isMetadataOf">is metadata of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasNrtAccess">
+  <h3>has near real-time access<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasNrtAccess</p>
+  <div class="comment">
+   <span class="markdown">Links near real-time DataAccess to a SignalDescription providing it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isNrtAccessOf" title="http://example.org/sdo/core#isNrtAccessOf">is near real-time access of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">
+  <h3>has OPC UA connection information<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasOpcUaConnectionInfo</p>
+  <div class="comment">
+   <span class="markdown">Links connection information to OPC UA Access requiring it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo" title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#isOpcUaConnectionInfoOf" title="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">is OPC UA connection information of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasSignalDescription">
+  <h3>has signal description<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasSignalDescription</p>
+  <div class="comment">
+   <span class="markdown">Links a SignalDescription to a Asset it contains to.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isSignalDescriptionOf" title="http://example.org/sdo/core#isSignalDescriptionOf">is signal description of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#hasTag">
+  <h3>has tag<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#hasTag</p>
+  <div class="comment">
+   <span class="markdown">Links a Tag identifying a point to InfluxDB Access.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#Tag" title="http://example.org/sdo/influxdb#Tag">Tag</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#isTagOf" title="http://example.org/sdo/influxdb#isTagOf">is tag of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasUnit">
+  <h3>has unit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasUnit</p>
+  <div class="comment">
+   <span class="markdown">Links a Unit to a SignalDescription its values are measured by.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#isUnitOf" title="http://example.org/sdo/core#isUnitOf">is unit of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isAssetOf">
+  <h3>is asset of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isAssetOf</p>
+  <div class="comment">
+   <span class="markdown">Links an Asset to another Asset contained by it.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasAsset" title="http://example.org/sdo/core#hasAsset">has asset</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isCredentialsOf">
+  <h3>is credentials of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isCredentialsOf</p>
+  <div class="comment">
+   <span class="markdown">Links a ConnectionInfo to Credentials provided by it for authentication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Credentials" title="http://example.org/sdo/core#Credentials">Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasCredentials" title="http://example.org/sdo/core#hasCredentials">has credentials</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isDataTypeOf">
+  <h3>is data type of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isDataTypeOf</p>
+  <div class="comment">
+   <span class="markdown">Links a SignalDescription to a Datatype referred by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2000/01/rdf-schema#Datatype" title="http://www.w3.org/2000/01/rdf-schema#Datatype">Datatype</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasDataType" title="http://example.org/sdo/core#hasDataType">has data type</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isHistAccessOf">
+  <h3>is historical access of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isHistAccessOf</p>
+  <div class="comment">
+   <span class="markdown">Links SignalDescription to historical DataAccess provided by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasHistAccess" title="http://example.org/sdo/core#hasHistAccess">has historical access</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">
+  <h3>is InfluxDB connection information of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf</p>
+  <div class="comment">
+   <span class="markdown">Links InfluxDB Access to connection information required by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">has InfluxDB connection information</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#isMessageSecurityOf">
+  <h3>is message security of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#isMessageSecurityOf</p>
+  <div class="comment">
+   <span class="markdown">Links OpcUaConnectionInfo to MessageSecurity required by it for secure communication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo" title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#hasMessageSecurity" title="http://example.org/sdo/opcua#hasMessageSecurity">has message security</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isMetadataOf">
+  <h3>is metadata of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isMetadataOf</p>
+  <div class="comment">
+   <span class="markdown">Links a SignalDescription to a metadata describing it</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#MetaData" title="http://example.org/sdo/core#MetaData">Meta Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasMetadata" title="http://example.org/sdo/core#hasMetadata">has metadata</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isNrtAccessOf">
+  <h3>is near real-time access of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isNrtAccessOf</p>
+  <div class="comment">
+   <span class="markdown">Links SignalDescription to near real-time DataAccess provided by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#DataAccess" title="http://example.org/sdo/core#DataAccess">Data Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasNrtAccess" title="http://example.org/sdo/core#hasNrtAccess">has near real-time access</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">
+  <h3>is OPC UA connection information of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#isOpcUaConnectionInfoOf</p>
+  <div class="comment">
+   <span class="markdown">Links OPC UA Access to connection information required by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaConnectionInfo" title="http://example.org/sdo/opcua#OpcUaConnectionInfo">Opc Ua Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#hasOpcUaConnectionInfo" title="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">has OPC UA connection information</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isSignalDescriptionOf">
+  <h3>is signal description of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isSignalDescriptionOf</p>
+  <div class="comment">
+   <span class="markdown">Links an Asset to a SignalDescription contained by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#Asset" title="http://example.org/sdo/core#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasSignalDescription" title="http://example.org/sdo/core#hasSignalDescription">has signal description</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#isTagOf">
+  <h3>is tag of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#isTagOf</p>
+  <div class="comment">
+   <span class="markdown">Links InfluxDB Access to a Tag identifying a point.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#Tag" title="http://example.org/sdo/influxdb#Tag">Tag</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#hasTag" title="http://example.org/sdo/influxdb#hasTag">has tag</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#isUnitOf">
+  <h3>is unit of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#isUnitOf</p>
+  <div class="comment">
+   <span class="markdown">Links a SignalDescription to a Unit measuring it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#hasUnit" title="http://example.org/sdo/core#hasUnit">has unit</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://example.org/sdo/influxdb#hasBucket" title="http://example.org/sdo/influxdb#hasBucket">has bucket</a></li>
+  <li><a href="#http://example.org/sdo/core#hasCert" title="http://example.org/sdo/core#hasCert">has certificate</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasClientCert" title="http://example.org/sdo/opcua#hasClientCert">has client certificate</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasClientPrivateKey" title="http://example.org/sdo/opcua#hasClientPrivateKey">has client private key</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#hasField" title="http://example.org/sdo/influxdb#hasField">has field</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasIdentifier" title="http://example.org/sdo/opcua#hasIdentifier">has identifier</a></li>
+  <li><a href="#http://example.org/sdo/core#hasKey" title="http://example.org/sdo/core#hasKey">has key</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#hasMeasurement" title="http://example.org/sdo/influxdb#hasMeasurement">has measurement</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasMode" title="http://example.org/sdo/opcua#hasMode">has mode</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasNamespaceIndex" title="http://example.org/sdo/opcua#hasNamespaceIndex">has namespace index</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasNamespaceURI" title="http://example.org/sdo/opcua#hasNamespaceURI">has namespace URI</a></li>
+  <li><a href="#http://example.org/sdo/influxdb#hasOrganization" title="http://example.org/sdo/influxdb#hasOrganization">has organization</a></li>
+  <li><a href="#http://example.org/sdo/core#hasPassword" title="http://example.org/sdo/core#hasPassword">has password</a></li>
+  <li><a href="#http://example.org/sdo/core#hasPrivateKey" title="http://example.org/sdo/core#hasPrivateKey">has private key</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasSecurityPolicy" title="http://example.org/sdo/opcua#hasSecurityPolicy">has security policy</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasServerCert" title="http://example.org/sdo/opcua#hasServerCert">has server certificate</a></li>
+  <li><a href="#http://example.org/sdo/opcua#hasServerIndex" title="http://example.org/sdo/opcua#hasServerIndex">has server index</a></li>
+  <li><a href="#http://example.org/sdo/core#hasSignalType" title="http://example.org/sdo/core#hasSignalType">has signal type</a></li>
+  <li><a href="#http://example.org/sdo/core#hasToken" title="http://example.org/sdo/core#hasToken">has token</a></li>
+  <li><a href="#http://example.org/sdo/core#hasURL" title="http://example.org/sdo/core#hasURL">has URL</a></li>
+  <li><a href="#http://example.org/sdo/core#hasUsername" title="http://example.org/sdo/core#hasUsername">has username</a></li>
+  <li><a href="#http://example.org/sdo/core#hasValue" title="http://example.org/sdo/core#hasValue">has value</a></li>
+ </ul>
+ <div class="entity" id="http://example.org/sdo/influxdb#hasBucket">
+  <h3>has bucket<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#hasBucket</p>
+  <div class="comment">
+   <span class="markdown">The bucket name in InfluxDB.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasCert">
+  <h3>has certificate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasCert</p>
+  <div class="comment">
+   <span class="markdown">The certificate used for certificate-based authentication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#CertCredentials" title="http://example.org/sdo/core#CertCredentials">Cert Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasClientCert">
+  <h3>has client certificate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasClientCert</p>
+  <div class="comment">
+   <span class="markdown">The client certificate used to establish an OPC UA secure channel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasClientPrivateKey">
+  <h3>has client private key<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasClientPrivateKey</p>
+  <div class="comment">
+   <span class="markdown">The client's private key used to establish an OPC UA secure channel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#hasField">
+  <h3>has field<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#hasField</p>
+  <div class="comment">
+   <span class="markdown">The field key in InfluxDB.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasIdentifier">
+  <h3>has identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasIdentifier</p>
+  <div class="comment">
+   <span class="markdown">The identifier used in node IDs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasKey">
+  <h3>has key<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasKey</p>
+  <div class="comment">
+   <span class="markdown">The key of a key-value pair.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#KeyValuePair" title="http://example.org/sdo/core#KeyValuePair">Key-Value Pair</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#hasMeasurement">
+  <h3>has measurement<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#hasMeasurement</p>
+  <div class="comment">
+   <span class="markdown">The measurement name in InfluxDB.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbAccess" title="http://example.org/sdo/influxdb#InfluxDbAccess">Influx Db Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasMode">
+  <h3>has mode<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasMode</p>
+  <div class="comment">
+   <span class="markdown">A enumeration that defines the message security mode.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     { "Sign" , "SignAndEncrypt" }
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasNamespaceIndex">
+  <h3>has namespace index<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasNamespaceIndex</p>
+  <div class="comment">
+   <span class="markdown">The namespace index used in node IDs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasNamespaceURI">
+  <h3>has namespace URI<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasNamespaceURI</p>
+  <div class="comment">
+   <span class="markdown">The URI of the namespace used in expanded node IDs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/influxdb#hasOrganization">
+  <h3>has organization<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/influxdb#hasOrganization</p>
+  <div class="comment">
+   <span class="markdown">The organization name in InfluxDB.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/influxdb#InfluxDbConnectionInfo" title="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">Influx Db Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasPassword">
+  <h3>has password<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasPassword</p>
+  <div class="comment">
+   <span class="markdown">The password used for username-password credentials.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#UserPassCredentials" title="http://example.org/sdo/core#UserPassCredentials">User Pass Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasPrivateKey">
+  <h3>has private key<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasPrivateKey</p>
+  <div class="comment">
+   <span class="markdown">The private key used for certificate-based authentication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#CertCredentials" title="http://example.org/sdo/core#CertCredentials">Cert Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasSecurityPolicy">
+  <h3>has security policy<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasSecurityPolicy</p>
+  <div class="comment">
+   <span class="markdown">The name of the security policy profile defining the cryptographic algorithms for OPC UA message security.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasServerCert">
+  <h3>has server certificate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasServerCert</p>
+  <div class="comment">
+   <span class="markdown">The server certificate used to establish an OPC UA secure channel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#MessageSecurity" title="http://example.org/sdo/opcua#MessageSecurity">Message Security</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/opcua#hasServerIndex">
+  <h3>has server index<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/opcua#hasServerIndex</p>
+  <div class="comment">
+   <span class="markdown">The server index used in expanded node IDs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/opcua#OpcUaAccess" title="http://example.org/sdo/opcua#OpcUaAccess">Opc Ua Access</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasSignalType">
+  <h3>has signal type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasSignalType</p>
+  <div class="comment">
+   <span class="markdown">A enumeration that determines how values between the data samples are interpreted.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#SignalDescription" title="http://example.org/sdo/core#SignalDescription">Signal Description</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     { "HoldObservations" , "LinearInterpolation" , "Observations" }
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasToken">
+  <h3>has token<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasToken</p>
+  <div class="comment">
+   <span class="markdown">The token used for token-based authentication.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#TokenCredentials" title="http://example.org/sdo/core#TokenCredentials">Token Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasURL">
+  <h3>has URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasURL</p>
+  <div class="comment">
+   <span class="markdown">The URL of a connection.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#ConnectionInfo" title="http://example.org/sdo/core#ConnectionInfo">Connection Info</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasUsername">
+  <h3>has username<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasUsername</p>
+  <div class="comment">
+   <span class="markdown">The username used for username-password credentials.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#UserPassCredentials" title="http://example.org/sdo/core#UserPassCredentials">User Pass Credentials</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://example.org/sdo/core#hasValue">
+  <h3>has value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/sdo/core#hasValue</p>
+  <div class="comment">
+   <span class="markdown">The value of a key-value pair.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://example.org/sdo/core#KeyValuePair" title="http://example.org/sdo/core#KeyValuePair">Key-Value Pair</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

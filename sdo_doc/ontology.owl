@@ -1,0 +1,966 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/sdo#"
+     xml:base="http://example.org/sdo"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://example.org/sdo#">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-25</terms:created>
+        <terms:creator>http://example.org/people#AlexanderEbner</terms:creator>
+        <terms:description xml:lang="en">An ontology for integrating data sources providing time series data based on signal descriptions.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">Signal Description Ontology</terms:title>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/sdo/core#signalType -->
+
+
+    <rdfs:Datatype rdf:about="http://example.org/sdo/core#signalType"/>
+    
+
+
+    <!-- http://example.org/sdo/opcua#mode -->
+
+
+    <rdfs:Datatype rdf:about="http://example.org/sdo/opcua#mode"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/sdo/core#hasAsset -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasAsset">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#Asset"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#Asset"/>
+        <rdfs:comment>Links an Asset to another Asset it contains to.</rdfs:comment>
+        <rdfs:label>has asset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasCredentials -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasCredentials">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#ConnectionInfo"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#Credentials"/>
+        <rdfs:comment>Links Credentials to a ConnectionInfo providing it for authentication.</rdfs:comment>
+        <rdfs:label>has credentials</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasDataType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasDataType">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#isDataTypeOf"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+        <rdfs:comment>Links a Datatype to a SignalDescription it refers to.</rdfs:comment>
+        <rdfs:label>has data type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasHistAccess -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasHistAccess">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#isHistAccessOf"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#DataAccess"/>
+        <rdfs:comment>Links historical DataAccess to a SignalDescription providing it.</rdfs:comment>
+        <rdfs:label>has historical access</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasMetadata -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasMetadata">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#MetaData"/>
+        <rdfs:comment>Links a metadata to a SignalDescription described by</rdfs:comment>
+        <rdfs:label>has metadata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasNrtAccess -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasNrtAccess">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#DataAccess"/>
+        <rdfs:comment>Links near real-time DataAccess to a SignalDescription providing it.</rdfs:comment>
+        <rdfs:label>has near real-time access</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasSignalDescription -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasSignalDescription">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#isSignalDescriptionOf"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#Asset"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:comment>Links a SignalDescription to a Asset it contains to.</rdfs:comment>
+        <rdfs:label>has signal description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#hasUnit">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#isUnitOf"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:comment>Links a Unit to a SignalDescription its values are measured by.</rdfs:comment>
+        <rdfs:label>has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isAssetOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isAssetOf">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#hasAsset"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#Asset"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#Asset"/>
+        <rdfs:comment>Links an Asset to another Asset contained by it.</rdfs:comment>
+        <rdfs:label>is asset of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isCredentialsOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isCredentialsOf">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#hasCredentials"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#Credentials"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#ConnectionInfo"/>
+        <rdfs:comment>Links a ConnectionInfo to Credentials provided by it for authentication.</rdfs:comment>
+        <rdfs:label>is credentials of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isDataTypeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isDataTypeOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:comment>Links a SignalDescription to a Datatype referred by it.</rdfs:comment>
+        <rdfs:label>is data type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isHistAccessOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isHistAccessOf">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#DataAccess"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:comment>Links SignalDescription to historical DataAccess provided by it.</rdfs:comment>
+        <rdfs:label>is historical access of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isMetadataOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isMetadataOf">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#hasMetadata"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#MetaData"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:comment>Links a SignalDescription to a metadata describing it</rdfs:comment>
+        <rdfs:label>is metadata of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isNrtAccessOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isNrtAccessOf">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/core#hasNrtAccess"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#DataAccess"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:comment>Links SignalDescription to near real-time DataAccess provided by it.</rdfs:comment>
+        <rdfs:label>is near real-time access of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isSignalDescriptionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isSignalDescriptionOf">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#Asset"/>
+        <rdfs:comment>Links an Asset to a SignalDescription contained by it.</rdfs:comment>
+        <rdfs:label>is signal description of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#isUnitOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/core#isUnitOf">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:comment>Links a SignalDescription to a Unit measuring it.</rdfs:comment>
+        <rdfs:label>is unit of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/influxdb#InfluxDbConnectionInfo"/>
+        <rdfs:comment>Links connection information to InfluxDB Access requiring it.</rdfs:comment>
+        <rdfs:label>has InfluxDB connection information</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#hasTag -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/influxdb#hasTag">
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/influxdb#Tag"/>
+        <rdfs:comment>Links a Tag identifying a point to InfluxDB Access.</rdfs:comment>
+        <rdfs:label>has tag</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf">
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbConnectionInfo"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+        <rdfs:comment>Links InfluxDB Access to connection information required by it.</rdfs:comment>
+        <rdfs:label>is InfluxDB connection information of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#isTagOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/influxdb#isTagOf">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/influxdb#hasTag"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#Tag"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+        <rdfs:comment>Links InfluxDB Access to a Tag identifying a point.</rdfs:comment>
+        <rdfs:label>is tag of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasMessageSecurity -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/opcua#hasMessageSecurity">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/opcua#isMessageSecurityOf"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaConnectionInfo"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:comment>Links MessageSecurity to OpcUaConnectionInfo requiring it for secure communication.</rdfs:comment>
+        <rdfs:label>has message security</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasOpcUaConnectionInfo -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/opcua#hasOpcUaConnectionInfo">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaAccess"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/opcua#OpcUaConnectionInfo"/>
+        <rdfs:comment>Links connection information to OPC UA Access requiring it.</rdfs:comment>
+        <rdfs:label>has OPC UA connection information</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#isMessageSecurityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/opcua#isMessageSecurityOf">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/opcua#OpcUaConnectionInfo"/>
+        <rdfs:comment>Links OpcUaConnectionInfo to MessageSecurity required by it for secure communication.</rdfs:comment>
+        <rdfs:label>is message security of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#isOpcUaConnectionInfoOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/sdo/opcua#isOpcUaConnectionInfoOf">
+        <owl:inverseOf rdf:resource="http://example.org/sdo/opcua#hasOpcUaConnectionInfo"/>
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaConnectionInfo"/>
+        <rdfs:range rdf:resource="http://example.org/sdo/opcua#OpcUaAccess"/>
+        <rdfs:comment>Links OPC UA Access to connection information required by it.</rdfs:comment>
+        <rdfs:label>is OPC UA connection information of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/sdo/core#hasCert -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasCert">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#CertCredentials"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The certificate used for certificate-based authentication.</rdfs:comment>
+        <rdfs:label>has certificate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasKey">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#KeyValuePair"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The key of a key-value pair.</rdfs:comment>
+        <rdfs:label>has key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasPassword -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasPassword">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#UserPassCredentials"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The password used for username-password credentials.</rdfs:comment>
+        <rdfs:label>has password</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasPrivateKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasPrivateKey">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#CertCredentials"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The private key used for certificate-based authentication.</rdfs:comment>
+        <rdfs:label>has private key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasSignalType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasSignalType">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#SignalDescription"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://example.org/sdo/core#signalType">HoldObservations</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://example.org/sdo/core#signalType">LinearInterpolation</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://example.org/sdo/core#signalType">Observations</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>A enumeration that determines how values between the data samples are interpreted.</rdfs:comment>
+        <rdfs:label>has signal type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasToken -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasToken">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#TokenCredentials"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The token used for token-based authentication.</rdfs:comment>
+        <rdfs:label>has token</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasURL -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasURL">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#ConnectionInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The URL of a connection.</rdfs:comment>
+        <rdfs:label>has URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasUsername -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasUsername">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#UserPassCredentials"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The username used for username-password credentials.</rdfs:comment>
+        <rdfs:label>has username</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/core#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/core#hasValue">
+        <rdfs:domain rdf:resource="http://example.org/sdo/core#KeyValuePair"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The value of a key-value pair.</rdfs:comment>
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#hasBucket -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/influxdb#hasBucket">
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbConnectionInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The bucket name in InfluxDB.</rdfs:comment>
+        <rdfs:label>has bucket</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#hasField -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/influxdb#hasField">
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The field key in InfluxDB.</rdfs:comment>
+        <rdfs:label>has field</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#hasMeasurement -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/influxdb#hasMeasurement">
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The measurement name in InfluxDB.</rdfs:comment>
+        <rdfs:label>has measurement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#hasOrganization -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/influxdb#hasOrganization">
+        <rdfs:domain rdf:resource="http://example.org/sdo/influxdb#InfluxDbConnectionInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The organization name in InfluxDB.</rdfs:comment>
+        <rdfs:label>has organization</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasClientCert -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasClientCert">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The client certificate used to establish an OPC UA secure channel.</rdfs:comment>
+        <rdfs:label>has client certificate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasClientPrivateKey -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasClientPrivateKey">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The client&apos;s private key used to establish an OPC UA secure channel.</rdfs:comment>
+        <rdfs:label>has client private key</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasIdentifier">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaAccess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The identifier used in node IDs.</rdfs:comment>
+        <rdfs:label>has identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasMode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasMode">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://example.org/sdo/opcua#mode">Sign</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://example.org/sdo/opcua#mode">SignAndEncrypt</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>A enumeration that defines the message security mode.</rdfs:comment>
+        <rdfs:label>has mode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasNamespaceIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasNamespaceIndex">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaAccess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The namespace index used in node IDs.</rdfs:comment>
+        <rdfs:label>has namespace index</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasNamespaceURI -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasNamespaceURI">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaAccess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The URI of the namespace used in expanded node IDs.</rdfs:comment>
+        <rdfs:label>has namespace URI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasSecurityPolicy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasSecurityPolicy">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of the security policy profile defining the cryptographic algorithms for OPC UA message security.</rdfs:comment>
+        <rdfs:label>has security policy</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasServerCert -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasServerCert">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#MessageSecurity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The server certificate used to establish an OPC UA secure channel.</rdfs:comment>
+        <rdfs:label>has server certificate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/sdo/opcua#hasServerIndex -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/sdo/opcua#hasServerIndex">
+        <rdfs:domain rdf:resource="http://example.org/sdo/opcua#OpcUaAccess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The server index used in expanded node IDs.</rdfs:comment>
+        <rdfs:label>has server index</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/sdo/core#Asset -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#Asset">
+        <rdfs:comment>Represents a physical or logical object that provides signals or contains other assets.</rdfs:comment>
+        <rdfs:label>Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#CertCredentials -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#CertCredentials">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#Credentials"/>
+        <rdfs:comment>Represents authentication using certificates.</rdfs:comment>
+        <rdfs:label>Cert Credentials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#ConnectionInfo -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#ConnectionInfo">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/sdo/influxdb#InfluxDbConnectionInfo"/>
+            <rdf:Description rdf:about="http://example.org/sdo/opcua#OpcUaConnectionInfo"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Contains the information required to connect to a source.</rdfs:comment>
+        <rdfs:label>Connection Info</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#Credentials -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#Credentials">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/sdo/core#CertCredentials"/>
+            <rdf:Description rdf:about="http://example.org/sdo/core#TokenCredentials"/>
+            <rdf:Description rdf:about="http://example.org/sdo/core#UserPassCredentials"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Serves as supertype for different authentication methods.</rdfs:comment>
+        <rdfs:label>Credentials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#DataAccess -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#DataAccess">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/sdo/influxdb#InfluxDbAccess"/>
+            <rdf:Description rdf:about="http://example.org/sdo/opcua#OpcUaAccess"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Serves as supertype for technology-specific types of data access, used to obtain signal values.</rdfs:comment>
+        <rdfs:label>Data Access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#KeyValuePair -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#KeyValuePair">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/sdo/core#MetaData"/>
+            <rdf:Description rdf:about="http://example.org/sdo/influxdb#Tag"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Represents data the in form of a key and a value.</rdfs:comment>
+        <rdfs:label>Key-Value Pair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#MetaData -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#MetaData">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#KeyValuePair"/>
+        <rdfs:comment>A key-value pair that adds information about a signal.</rdfs:comment>
+        <rdfs:label>Meta Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#SignalDescription -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#SignalDescription">
+        <rdfs:comment>Contains the information to enable interpretation and data access of a signal.</rdfs:comment>
+        <rdfs:label>Signal Description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#TokenCredentials -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#TokenCredentials">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#Credentials"/>
+        <rdfs:comment>Represents authentication based on tokens.</rdfs:comment>
+        <rdfs:label>Token Credentials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/core#UserPassCredentials -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/core#UserPassCredentials">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#Credentials"/>
+        <rdfs:comment>Represents authentication based on username and password.</rdfs:comment>
+        <rdfs:label>User Pass Credentials</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#InfluxDbAccess -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/influxdb#InfluxDbAccess">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#DataAccess"/>
+        <rdfs:comment>Contains the information used to query InfluxDB points.</rdfs:comment>
+        <rdfs:label>Influx Db Access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#InfluxDbConnectionInfo -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/influxdb#InfluxDbConnectionInfo">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#ConnectionInfo"/>
+        <rdfs:comment>Contains the information required to connect to an InfluxDB server.</rdfs:comment>
+        <rdfs:label>Influx Db Connection Info</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/influxdb#Tag -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/influxdb#Tag">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#KeyValuePair"/>
+        <rdfs:comment>A key-value pair used to query points in InfluxDB.</rdfs:comment>
+        <rdfs:label>Tag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/opcua#MessageSecurity -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/opcua#MessageSecurity">
+        <rdfs:comment>Contains the information required to establish a secure channel in OPC UA.</rdfs:comment>
+        <rdfs:label>Message Security</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/opcua#OpcUaAccess -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/opcua#OpcUaAccess">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#DataAccess"/>
+        <rdfs:comment>Contains the information used to access OPC UA nodes.</rdfs:comment>
+        <rdfs:label>Opc Ua Access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sdo/opcua#OpcUaConnectionInfo -->
+
+
+    <owl:Class rdf:about="http://example.org/sdo/opcua#OpcUaConnectionInfo">
+        <rdfs:subClassOf rdf:resource="http://example.org/sdo/core#ConnectionInfo"/>
+        <rdfs:comment>Contains the information required to connect to an OPC UA server.</rdfs:comment>
+        <rdfs:label>Opc Ua Connection Info</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
+        <rdfs:comment>Refers to a QUDT Unit</rdfs:comment>
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Datatype -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype">
+        <rdfs:comment>Refers to a RDFS Datatype</rdfs:comment>
+        <rdfs:label>Datatype</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
