@@ -244,7 +244,7 @@ def get_opcua_node(g, signal):
 
 async def main():
     g = Graph()
-    g.parse("onto_v08.ttl", format="turtle")
+    g.parse("onto_v01.ttl", format="turtle")
     g.parse("abox.ttl", format="turtle")
 
     if sys.argv[1] == "discover":

@@ -9,9 +9,9 @@ It provides the ontology in different variants, example instance data and the pr
 
 ### Root Files
 
-- **`onto_v08_with_comments.ttl`** 
+- **`onto_v01.ttl`** 
   Full ontology including explanatory annotations using `rdf:comment`. 
-- **`onto_v08.ttl`** 
+- **`onto_v01_no_comments.ttl`** 
   Full ontology without annotations. 
 - **`abox.ttl`** 
   Example instance data illustrating the ontology's usage. 
@@ -64,4 +64,5 @@ Offline imports for opening `abox.ttl` are supported through the included `catal
 
 ## License
 
-Licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+The software is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+The ontology is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0).

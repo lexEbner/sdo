@@ -13,11 +13,11 @@
 @base <http://example.org/sdo#> .
 
 <http://example.org/sdo#> a owl:Ontology ;
-    dcterms:created "2025-04-22"^^xsd:date ;
+    dcterms:created "2025-09-25"^^xsd:date ;
     dcterms:creator "http://example.org/people#AlexanderEbner" ;
     dcterms:description "An ontology for integrating data sources providing time series data based on signal descriptions."@en ;
     dcterms:title "Signal Description Ontology"@en ;
-    owl:versionInfo "0.8" ;
+    owl:versionInfo "0.1" ;
     mod:createdWith <https://chowlk.linkeddata.es/> ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
 
