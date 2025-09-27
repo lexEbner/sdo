@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------
   InfluxDB
 ---------------------------------------------------------------------------
-http://example.org/sdo/abox#Room1_Temperature
+https://purl.org/signal-description-ontology/abox#Room1_Temperature
 [
   {
     "result": "_result",
@@ -28,7 +28,7 @@ http://example.org/sdo/abox#Room1_Temperature
     "_measurement": "machine_data"
   }
 ]
-http://example.org/sdo/abox#Extruder_Temperature
+https://purl.org/signal-description-ontology/abox#Extruder_Temperature
 [
   {
     "result": "_result",
@@ -59,7 +59,7 @@ http://example.org/sdo/abox#Extruder_Temperature
     "_measurement": "machine_data"
   }
 ]
-http://example.org/sdo/abox#Extruder_Throughput
+https://purl.org/signal-description-ontology/abox#Extruder_Throughput
 [
   {
     "result": "_result",
@@ -90,7 +90,7 @@ http://example.org/sdo/abox#Extruder_Throughput
     "_measurement": "machine_data"
   }
 ]
-http://example.org/sdo/abox#Press_MaterialTemperature
+https://purl.org/signal-description-ontology/abox#Press_MaterialTemperature
 [
   {
     "result": "_result",
@@ -121,7 +121,7 @@ http://example.org/sdo/abox#Press_MaterialTemperature
     "_measurement": "machine_data"
   }
 ]
-http://example.org/sdo/abox#Press_Pressure
+https://purl.org/signal-description-ontology/abox#Press_Pressure
 [
   {
     "result": "_result",
@@ -152,7 +152,7 @@ http://example.org/sdo/abox#Press_Pressure
     "_measurement": "machine_data"
   }
 ]
-http://example.org/sdo/abox#Trimmer_Pressure
+https://purl.org/signal-description-ontology/abox#Trimmer_Pressure
 [
   {
     "result": "_result",
@@ -183,7 +183,7 @@ http://example.org/sdo/abox#Trimmer_Pressure
     "_measurement": "machine_data"
   }
 ]
-http://example.org/sdo/abox#Trimmer_ZPosition
+https://purl.org/signal-description-ontology/abox#Trimmer_ZPosition
 [
   {
     "result": "_result",

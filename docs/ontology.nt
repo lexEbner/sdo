@@ -1,11 +1,11 @@
-<http://example.org/sdo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://example.org/sdo#> <http://purl.org/dc/terms/created> "2025-09-25"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://example.org/sdo#> <http://purl.org/dc/terms/creator> "http://example.org/people#AlexanderEbner" .
-<http://example.org/sdo#> <http://purl.org/dc/terms/description> "An ontology for integrating data sources providing time series data based on signal descriptions."@en .
-<http://example.org/sdo#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<http://example.org/sdo#> <http://purl.org/dc/terms/title> "Signal Description Ontology"@en .
-<http://example.org/sdo#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" .
-<http://example.org/sdo#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://purl.org/signal-description-ontology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://purl.org/signal-description-ontology#> <http://purl.org/dc/terms/created> "2025-09-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://purl.org/signal-description-ontology#> <http://purl.org/dc/terms/creator> "http://example.org/people#AlexanderEbner" .
+<https://purl.org/signal-description-ontology#> <http://purl.org/dc/terms/description> "An ontology for integrating data sources providing time series data based on signal descriptions."@en .
+<https://purl.org/signal-description-ontology#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://purl.org/signal-description-ontology#> <http://purl.org/dc/terms/title> "Signal Description Ontology"@en .
+<https://purl.org/signal-description-ontology#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" .
+<https://purl.org/signal-description-ontology#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
 # #################################################################
@@ -45,11 +45,11 @@
 # #################################################################
 # 
 # 
-# http://example.org/sdo/core#signalType
-<http://example.org/sdo/core#signalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# https://purl.org/signal-description-ontology/core#signalType
+<https://purl.org/signal-description-ontology/core#signalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 # 
-# http://example.org/sdo/opcua#mode
-<http://example.org/sdo/opcua#mode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# https://purl.org/signal-description-ontology/opcua#mode
+<https://purl.org/signal-description-ontology/opcua#mode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 # 
 # http://www.w3.org/2001/XMLSchema#date
 <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
@@ -63,187 +63,187 @@
 # #################################################################
 # 
 # 
-# http://example.org/sdo/core#hasAsset
-<http://example.org/sdo/core#hasAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<http://example.org/sdo/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#Asset> .
-<http://example.org/sdo/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#Asset> .
-<http://example.org/sdo/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Asset to another Asset it contains to." .
-<http://example.org/sdo/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#label> "has asset" .
+# https://purl.org/signal-description-ontology/core#hasAsset
+<https://purl.org/signal-description-ontology/core#hasAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://purl.org/signal-description-ontology/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#Asset> .
+<https://purl.org/signal-description-ontology/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#Asset> .
+<https://purl.org/signal-description-ontology/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Asset to another Asset it contains to." .
+<https://purl.org/signal-description-ontology/core#hasAsset> <http://www.w3.org/2000/01/rdf-schema#label> "has asset" .
 # 
-# http://example.org/sdo/core#hasCredentials
-<http://example.org/sdo/core#hasCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#ConnectionInfo> .
-<http://example.org/sdo/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#Credentials> .
-<http://example.org/sdo/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Links Credentials to a ConnectionInfo providing it for authentication." .
-<http://example.org/sdo/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "has credentials" .
+# https://purl.org/signal-description-ontology/core#hasCredentials
+<https://purl.org/signal-description-ontology/core#hasCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#ConnectionInfo> .
+<https://purl.org/signal-description-ontology/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#Credentials> .
+<https://purl.org/signal-description-ontology/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Links Credentials to a ConnectionInfo providing it for authentication." .
+<https://purl.org/signal-description-ontology/core#hasCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "has credentials" .
 # 
-# http://example.org/sdo/core#hasDataType
-<http://example.org/sdo/core#hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasDataType> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#isDataTypeOf> .
-<http://example.org/sdo/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://example.org/sdo/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Datatype to a SignalDescription it refers to." .
-<http://example.org/sdo/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#label> "has data type" .
+# https://purl.org/signal-description-ontology/core#hasDataType
+<https://purl.org/signal-description-ontology/core#hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasDataType> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#isDataTypeOf> .
+<https://purl.org/signal-description-ontology/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://purl.org/signal-description-ontology/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Datatype to a SignalDescription it refers to." .
+<https://purl.org/signal-description-ontology/core#hasDataType> <http://www.w3.org/2000/01/rdf-schema#label> "has data type" .
 # 
-# http://example.org/sdo/core#hasHistAccess
-<http://example.org/sdo/core#hasHistAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasHistAccess> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#isHistAccessOf> .
-<http://example.org/sdo/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#DataAccess> .
-<http://example.org/sdo/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Links historical DataAccess to a SignalDescription providing it." .
-<http://example.org/sdo/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#label> "has historical access" .
+# https://purl.org/signal-description-ontology/core#hasHistAccess
+<https://purl.org/signal-description-ontology/core#hasHistAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasHistAccess> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#isHistAccessOf> .
+<https://purl.org/signal-description-ontology/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#DataAccess> .
+<https://purl.org/signal-description-ontology/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Links historical DataAccess to a SignalDescription providing it." .
+<https://purl.org/signal-description-ontology/core#hasHistAccess> <http://www.w3.org/2000/01/rdf-schema#label> "has historical access" .
 # 
-# http://example.org/sdo/core#hasMetadata
-<http://example.org/sdo/core#hasMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#MetaData> .
-<http://example.org/sdo/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a metadata to a SignalDescription described by" .
-<http://example.org/sdo/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "has metadata" .
+# https://purl.org/signal-description-ontology/core#hasMetadata
+<https://purl.org/signal-description-ontology/core#hasMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#MetaData> .
+<https://purl.org/signal-description-ontology/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a metadata to a SignalDescription described by" .
+<https://purl.org/signal-description-ontology/core#hasMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "has metadata" .
 # 
-# http://example.org/sdo/core#hasNrtAccess
-<http://example.org/sdo/core#hasNrtAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#DataAccess> .
-<http://example.org/sdo/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Links near real-time DataAccess to a SignalDescription providing it." .
-<http://example.org/sdo/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#label> "has near real-time access" .
+# https://purl.org/signal-description-ontology/core#hasNrtAccess
+<https://purl.org/signal-description-ontology/core#hasNrtAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#DataAccess> .
+<https://purl.org/signal-description-ontology/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Links near real-time DataAccess to a SignalDescription providing it." .
+<https://purl.org/signal-description-ontology/core#hasNrtAccess> <http://www.w3.org/2000/01/rdf-schema#label> "has near real-time access" .
 # 
-# http://example.org/sdo/core#hasSignalDescription
-<http://example.org/sdo/core#hasSignalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasSignalDescription> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#isSignalDescriptionOf> .
-<http://example.org/sdo/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#Asset> .
-<http://example.org/sdo/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a Asset it contains to." .
-<http://example.org/sdo/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has signal description" .
+# https://purl.org/signal-description-ontology/core#hasSignalDescription
+<https://purl.org/signal-description-ontology/core#hasSignalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasSignalDescription> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#isSignalDescriptionOf> .
+<https://purl.org/signal-description-ontology/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#Asset> .
+<https://purl.org/signal-description-ontology/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a Asset it contains to." .
+<https://purl.org/signal-description-ontology/core#hasSignalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has signal description" .
 # 
-# http://example.org/sdo/core#hasUnit
-<http://example.org/sdo/core#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#hasUnit> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#isUnitOf> .
-<http://example.org/sdo/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
-<http://example.org/sdo/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Unit to a SignalDescription its values are measured by." .
-<http://example.org/sdo/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit" .
+# https://purl.org/signal-description-ontology/core#hasUnit
+<https://purl.org/signal-description-ontology/core#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#hasUnit> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#isUnitOf> .
+<https://purl.org/signal-description-ontology/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+<https://purl.org/signal-description-ontology/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Unit to a SignalDescription its values are measured by." .
+<https://purl.org/signal-description-ontology/core#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit" .
 # 
-# http://example.org/sdo/core#isAssetOf
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#hasAsset> .
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#Asset> .
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#Asset> .
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Asset to another Asset contained by it." .
-<http://example.org/sdo/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#label> "is asset of" .
+# https://purl.org/signal-description-ontology/core#isAssetOf
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#hasAsset> .
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#Asset> .
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#Asset> .
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Asset to another Asset contained by it." .
+<https://purl.org/signal-description-ontology/core#isAssetOf> <http://www.w3.org/2000/01/rdf-schema#label> "is asset of" .
 # 
-# http://example.org/sdo/core#isCredentialsOf
-<http://example.org/sdo/core#isCredentialsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isCredentialsOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#hasCredentials> .
-<http://example.org/sdo/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#Credentials> .
-<http://example.org/sdo/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#ConnectionInfo> .
-<http://example.org/sdo/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a ConnectionInfo to Credentials provided by it for authentication." .
-<http://example.org/sdo/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#label> "is credentials of" .
+# https://purl.org/signal-description-ontology/core#isCredentialsOf
+<https://purl.org/signal-description-ontology/core#isCredentialsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isCredentialsOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#hasCredentials> .
+<https://purl.org/signal-description-ontology/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#Credentials> .
+<https://purl.org/signal-description-ontology/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#ConnectionInfo> .
+<https://purl.org/signal-description-ontology/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a ConnectionInfo to Credentials provided by it for authentication." .
+<https://purl.org/signal-description-ontology/core#isCredentialsOf> <http://www.w3.org/2000/01/rdf-schema#label> "is credentials of" .
 # 
-# http://example.org/sdo/core#isDataTypeOf
-<http://example.org/sdo/core#isDataTypeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://example.org/sdo/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a Datatype referred by it." .
-<http://example.org/sdo/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is data type of" .
+# https://purl.org/signal-description-ontology/core#isDataTypeOf
+<https://purl.org/signal-description-ontology/core#isDataTypeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://purl.org/signal-description-ontology/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a Datatype referred by it." .
+<https://purl.org/signal-description-ontology/core#isDataTypeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is data type of" .
 # 
-# http://example.org/sdo/core#isHistAccessOf
-<http://example.org/sdo/core#isHistAccessOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#DataAccess> .
-<http://example.org/sdo/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links SignalDescription to historical DataAccess provided by it." .
-<http://example.org/sdo/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#label> "is historical access of" .
+# https://purl.org/signal-description-ontology/core#isHistAccessOf
+<https://purl.org/signal-description-ontology/core#isHistAccessOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#DataAccess> .
+<https://purl.org/signal-description-ontology/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links SignalDescription to historical DataAccess provided by it." .
+<https://purl.org/signal-description-ontology/core#isHistAccessOf> <http://www.w3.org/2000/01/rdf-schema#label> "is historical access of" .
 # 
-# http://example.org/sdo/core#isMetadataOf
-<http://example.org/sdo/core#isMetadataOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isMetadataOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#hasMetadata> .
-<http://example.org/sdo/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#MetaData> .
-<http://example.org/sdo/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a metadata describing it" .
-<http://example.org/sdo/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#label> "is metadata of" .
+# https://purl.org/signal-description-ontology/core#isMetadataOf
+<https://purl.org/signal-description-ontology/core#isMetadataOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isMetadataOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#hasMetadata> .
+<https://purl.org/signal-description-ontology/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#MetaData> .
+<https://purl.org/signal-description-ontology/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a metadata describing it" .
+<https://purl.org/signal-description-ontology/core#isMetadataOf> <http://www.w3.org/2000/01/rdf-schema#label> "is metadata of" .
 # 
-# http://example.org/sdo/core#isNrtAccessOf
-<http://example.org/sdo/core#isNrtAccessOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isNrtAccessOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/core#hasNrtAccess> .
-<http://example.org/sdo/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#DataAccess> .
-<http://example.org/sdo/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links SignalDescription to near real-time DataAccess provided by it." .
-<http://example.org/sdo/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#label> "is near real-time access of" .
+# https://purl.org/signal-description-ontology/core#isNrtAccessOf
+<https://purl.org/signal-description-ontology/core#isNrtAccessOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isNrtAccessOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/core#hasNrtAccess> .
+<https://purl.org/signal-description-ontology/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#DataAccess> .
+<https://purl.org/signal-description-ontology/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links SignalDescription to near real-time DataAccess provided by it." .
+<https://purl.org/signal-description-ontology/core#isNrtAccessOf> <http://www.w3.org/2000/01/rdf-schema#label> "is near real-time access of" .
 # 
-# http://example.org/sdo/core#isSignalDescriptionOf
-<http://example.org/sdo/core#isSignalDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#Asset> .
-<http://example.org/sdo/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Asset to a SignalDescription contained by it." .
-<http://example.org/sdo/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is signal description of" .
+# https://purl.org/signal-description-ontology/core#isSignalDescriptionOf
+<https://purl.org/signal-description-ontology/core#isSignalDescriptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#Asset> .
+<https://purl.org/signal-description-ontology/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Asset to a SignalDescription contained by it." .
+<https://purl.org/signal-description-ontology/core#isSignalDescriptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is signal description of" .
 # 
-# http://example.org/sdo/core#isUnitOf
-<http://example.org/sdo/core#isUnitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://qudt.org/schema/qudt/Unit> .
-<http://example.org/sdo/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a Unit measuring it." .
-<http://example.org/sdo/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#label> "is unit of" .
+# https://purl.org/signal-description-ontology/core#isUnitOf
+<https://purl.org/signal-description-ontology/core#isUnitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://qudt.org/schema/qudt/Unit> .
+<https://purl.org/signal-description-ontology/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SignalDescription to a Unit measuring it." .
+<https://purl.org/signal-description-ontology/core#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#label> "is unit of" .
 # 
-# http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo
-<http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf> .
-<http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbAccess> .
-<http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/influxdb#InfluxDbConnectionInfo> .
-<http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links connection information to InfluxDB Access requiring it." .
-<http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "has InfluxDB connection information" .
+# https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo
+<https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf> .
+<https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
+<https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> .
+<https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links connection information to InfluxDB Access requiring it." .
+<https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "has InfluxDB connection information" .
 # 
-# http://example.org/sdo/influxdb#hasTag
-<http://example.org/sdo/influxdb#hasTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbAccess> .
-<http://example.org/sdo/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/influxdb#Tag> .
-<http://example.org/sdo/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Tag identifying a point to InfluxDB Access." .
-<http://example.org/sdo/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#label> "has tag" .
+# https://purl.org/signal-description-ontology/influxdb#hasTag
+<https://purl.org/signal-description-ontology/influxdb#hasTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
+<https://purl.org/signal-description-ontology/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/influxdb#Tag> .
+<https://purl.org/signal-description-ontology/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Tag identifying a point to InfluxDB Access." .
+<https://purl.org/signal-description-ontology/influxdb#hasTag> <http://www.w3.org/2000/01/rdf-schema#label> "has tag" .
 # 
-# http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf
-<http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbConnectionInfo> .
-<http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/influxdb#InfluxDbAccess> .
-<http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links InfluxDB Access to connection information required by it." .
-<http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#label> "is InfluxDB connection information of" .
+# https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf
+<https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> .
+<https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
+<https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links InfluxDB Access to connection information required by it." .
+<https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#label> "is InfluxDB connection information of" .
 # 
-# http://example.org/sdo/influxdb#isTagOf
-<http://example.org/sdo/influxdb#isTagOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/influxdb#isTagOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/influxdb#hasTag> .
-<http://example.org/sdo/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#Tag> .
-<http://example.org/sdo/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/influxdb#InfluxDbAccess> .
-<http://example.org/sdo/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links InfluxDB Access to a Tag identifying a point." .
-<http://example.org/sdo/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#label> "is tag of" .
+# https://purl.org/signal-description-ontology/influxdb#isTagOf
+<https://purl.org/signal-description-ontology/influxdb#isTagOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/influxdb#isTagOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/influxdb#hasTag> .
+<https://purl.org/signal-description-ontology/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#Tag> .
+<https://purl.org/signal-description-ontology/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
+<https://purl.org/signal-description-ontology/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links InfluxDB Access to a Tag identifying a point." .
+<https://purl.org/signal-description-ontology/influxdb#isTagOf> <http://www.w3.org/2000/01/rdf-schema#label> "is tag of" .
 # 
-# http://example.org/sdo/opcua#hasMessageSecurity
-<http://example.org/sdo/opcua#hasMessageSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/opcua#hasMessageSecurity> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/opcua#isMessageSecurityOf> .
-<http://example.org/sdo/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaConnectionInfo> .
-<http://example.org/sdo/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#comment> "Links MessageSecurity to OpcUaConnectionInfo requiring it for secure communication." .
-<http://example.org/sdo/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#label> "has message security" .
+# https://purl.org/signal-description-ontology/opcua#hasMessageSecurity
+<https://purl.org/signal-description-ontology/opcua#hasMessageSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasMessageSecurity> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf> .
+<https://purl.org/signal-description-ontology/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> .
+<https://purl.org/signal-description-ontology/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#comment> "Links MessageSecurity to OpcUaConnectionInfo requiring it for secure communication." .
+<https://purl.org/signal-description-ontology/opcua#hasMessageSecurity> <http://www.w3.org/2000/01/rdf-schema#label> "has message security" .
 # 
-# http://example.org/sdo/opcua#hasOpcUaConnectionInfo
-<http://example.org/sdo/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaAccess> .
-<http://example.org/sdo/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/opcua#OpcUaConnectionInfo> .
-<http://example.org/sdo/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links connection information to OPC UA Access requiring it." .
-<http://example.org/sdo/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "has OPC UA connection information" .
+# https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo
+<https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
+<https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> .
+<https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links connection information to OPC UA Access requiring it." .
+<https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "has OPC UA connection information" .
 # 
-# http://example.org/sdo/opcua#isMessageSecurityOf
-<http://example.org/sdo/opcua#isMessageSecurityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/opcua#OpcUaConnectionInfo> .
-<http://example.org/sdo/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links OpcUaConnectionInfo to MessageSecurity required by it for secure communication." .
-<http://example.org/sdo/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is message security of" .
+# https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf
+<https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> .
+<https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links OpcUaConnectionInfo to MessageSecurity required by it for secure communication." .
+<https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is message security of" .
 # 
-# http://example.org/sdo/opcua#isOpcUaConnectionInfoOf
-<http://example.org/sdo/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/sdo/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://example.org/sdo/opcua#hasOpcUaConnectionInfo> .
-<http://example.org/sdo/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaConnectionInfo> .
-<http://example.org/sdo/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/sdo/opcua#OpcUaAccess> .
-<http://example.org/sdo/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links OPC UA Access to connection information required by it." .
-<http://example.org/sdo/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#label> "is OPC UA connection information of" .
+# https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf
+<https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo> .
+<https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> .
+<https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
+<https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links OPC UA Access to connection information required by it." .
+<https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf> <http://www.w3.org/2000/01/rdf-schema#label> "is OPC UA connection information of" .
 # 
 # 
 # 
@@ -254,178 +254,178 @@
 # #################################################################
 # 
 # 
-# http://example.org/sdo/core#hasCert
-<http://example.org/sdo/core#hasCert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#CertCredentials> .
-<http://example.org/sdo/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#comment> "The certificate used for certificate-based authentication." .
-<http://example.org/sdo/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#label> "has certificate" .
+# https://purl.org/signal-description-ontology/core#hasCert
+<https://purl.org/signal-description-ontology/core#hasCert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#CertCredentials> .
+<https://purl.org/signal-description-ontology/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#comment> "The certificate used for certificate-based authentication." .
+<https://purl.org/signal-description-ontology/core#hasCert> <http://www.w3.org/2000/01/rdf-schema#label> "has certificate" .
 # 
-# http://example.org/sdo/core#hasKey
-<http://example.org/sdo/core#hasKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#KeyValuePair> .
-<http://example.org/sdo/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The key of a key-value pair." .
-<http://example.org/sdo/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#label> "has key" .
+# https://purl.org/signal-description-ontology/core#hasKey
+<https://purl.org/signal-description-ontology/core#hasKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#KeyValuePair> .
+<https://purl.org/signal-description-ontology/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The key of a key-value pair." .
+<https://purl.org/signal-description-ontology/core#hasKey> <http://www.w3.org/2000/01/rdf-schema#label> "has key" .
 # 
-# http://example.org/sdo/core#hasPassword
-<http://example.org/sdo/core#hasPassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#UserPassCredentials> .
-<http://example.org/sdo/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#comment> "The password used for username-password credentials." .
-<http://example.org/sdo/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#label> "has password" .
+# https://purl.org/signal-description-ontology/core#hasPassword
+<https://purl.org/signal-description-ontology/core#hasPassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#UserPassCredentials> .
+<https://purl.org/signal-description-ontology/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#comment> "The password used for username-password credentials." .
+<https://purl.org/signal-description-ontology/core#hasPassword> <http://www.w3.org/2000/01/rdf-schema#label> "has password" .
 # 
-# http://example.org/sdo/core#hasPrivateKey
-<http://example.org/sdo/core#hasPrivateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#CertCredentials> .
-<http://example.org/sdo/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The private key used for certificate-based authentication." .
-<http://example.org/sdo/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#label> "has private key" .
+# https://purl.org/signal-description-ontology/core#hasPrivateKey
+<https://purl.org/signal-description-ontology/core#hasPrivateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#CertCredentials> .
+<https://purl.org/signal-description-ontology/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The private key used for certificate-based authentication." .
+<https://purl.org/signal-description-ontology/core#hasPrivateKey> <http://www.w3.org/2000/01/rdf-schema#label> "has private key" .
 # 
-# http://example.org/sdo/core#hasSignalType
-<http://example.org/sdo/core#hasSignalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#SignalDescription> .
-<http://example.org/sdo/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+# https://purl.org/signal-description-ontology/core#hasSignalType
+<https://purl.org/signal-description-ontology/core#hasSignalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#SignalDescription> .
+<https://purl.org/signal-description-ontology/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Observations"^^<http://example.org/sdo/core#signalType> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Observations"^^<https://purl.org/signal-description-ontology/core#signalType> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "LinearInterpolation"^^<http://example.org/sdo/core#signalType> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "LinearInterpolation"^^<https://purl.org/signal-description-ontology/core#signalType> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "HoldObservations"^^<http://example.org/sdo/core#signalType> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "HoldObservations"^^<https://purl.org/signal-description-ontology/core#signalType> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://example.org/sdo/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#comment> "A enumeration that determines how values between the data samples are interpreted." .
-<http://example.org/sdo/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#label> "has signal type" .
+<https://purl.org/signal-description-ontology/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#comment> "A enumeration that determines how values between the data samples are interpreted." .
+<https://purl.org/signal-description-ontology/core#hasSignalType> <http://www.w3.org/2000/01/rdf-schema#label> "has signal type" .
 # 
-# http://example.org/sdo/core#hasToken
-<http://example.org/sdo/core#hasToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#TokenCredentials> .
-<http://example.org/sdo/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#comment> "The token used for token-based authentication." .
-<http://example.org/sdo/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#label> "has token" .
+# https://purl.org/signal-description-ontology/core#hasToken
+<https://purl.org/signal-description-ontology/core#hasToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#TokenCredentials> .
+<https://purl.org/signal-description-ontology/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#comment> "The token used for token-based authentication." .
+<https://purl.org/signal-description-ontology/core#hasToken> <http://www.w3.org/2000/01/rdf-schema#label> "has token" .
 # 
-# http://example.org/sdo/core#hasURL
-<http://example.org/sdo/core#hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#ConnectionInfo> .
-<http://example.org/sdo/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL of a connection." .
-<http://example.org/sdo/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#label> "has URL" .
+# https://purl.org/signal-description-ontology/core#hasURL
+<https://purl.org/signal-description-ontology/core#hasURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#ConnectionInfo> .
+<https://purl.org/signal-description-ontology/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL of a connection." .
+<https://purl.org/signal-description-ontology/core#hasURL> <http://www.w3.org/2000/01/rdf-schema#label> "has URL" .
 # 
-# http://example.org/sdo/core#hasUsername
-<http://example.org/sdo/core#hasUsername> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#UserPassCredentials> .
-<http://example.org/sdo/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#comment> "The username used for username-password credentials." .
-<http://example.org/sdo/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#label> "has username" .
+# https://purl.org/signal-description-ontology/core#hasUsername
+<https://purl.org/signal-description-ontology/core#hasUsername> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#UserPassCredentials> .
+<https://purl.org/signal-description-ontology/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#comment> "The username used for username-password credentials." .
+<https://purl.org/signal-description-ontology/core#hasUsername> <http://www.w3.org/2000/01/rdf-schema#label> "has username" .
 # 
-# http://example.org/sdo/core#hasValue
-<http://example.org/sdo/core#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/core#KeyValuePair> .
-<http://example.org/sdo/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://example.org/sdo/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of a key-value pair." .
-<http://example.org/sdo/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value" .
+# https://purl.org/signal-description-ontology/core#hasValue
+<https://purl.org/signal-description-ontology/core#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/core#KeyValuePair> .
+<https://purl.org/signal-description-ontology/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://purl.org/signal-description-ontology/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of a key-value pair." .
+<https://purl.org/signal-description-ontology/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value" .
 # 
-# http://example.org/sdo/influxdb#hasBucket
-<http://example.org/sdo/influxdb#hasBucket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbConnectionInfo> .
-<http://example.org/sdo/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#comment> "The bucket name in InfluxDB." .
-<http://example.org/sdo/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#label> "has bucket" .
+# https://purl.org/signal-description-ontology/influxdb#hasBucket
+<https://purl.org/signal-description-ontology/influxdb#hasBucket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> .
+<https://purl.org/signal-description-ontology/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#comment> "The bucket name in InfluxDB." .
+<https://purl.org/signal-description-ontology/influxdb#hasBucket> <http://www.w3.org/2000/01/rdf-schema#label> "has bucket" .
 # 
-# http://example.org/sdo/influxdb#hasField
-<http://example.org/sdo/influxdb#hasField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbAccess> .
-<http://example.org/sdo/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#comment> "The field key in InfluxDB." .
-<http://example.org/sdo/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#label> "has field" .
+# https://purl.org/signal-description-ontology/influxdb#hasField
+<https://purl.org/signal-description-ontology/influxdb#hasField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
+<https://purl.org/signal-description-ontology/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#comment> "The field key in InfluxDB." .
+<https://purl.org/signal-description-ontology/influxdb#hasField> <http://www.w3.org/2000/01/rdf-schema#label> "has field" .
 # 
-# http://example.org/sdo/influxdb#hasMeasurement
-<http://example.org/sdo/influxdb#hasMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbAccess> .
-<http://example.org/sdo/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "The measurement name in InfluxDB." .
-<http://example.org/sdo/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement" .
+# https://purl.org/signal-description-ontology/influxdb#hasMeasurement
+<https://purl.org/signal-description-ontology/influxdb#hasMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
+<https://purl.org/signal-description-ontology/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "The measurement name in InfluxDB." .
+<https://purl.org/signal-description-ontology/influxdb#hasMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement" .
 # 
-# http://example.org/sdo/influxdb#hasOrganization
-<http://example.org/sdo/influxdb#hasOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/influxdb#InfluxDbConnectionInfo> .
-<http://example.org/sdo/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The organization name in InfluxDB." .
-<http://example.org/sdo/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "has organization" .
+# https://purl.org/signal-description-ontology/influxdb#hasOrganization
+<https://purl.org/signal-description-ontology/influxdb#hasOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> .
+<https://purl.org/signal-description-ontology/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The organization name in InfluxDB." .
+<https://purl.org/signal-description-ontology/influxdb#hasOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "has organization" .
 # 
-# http://example.org/sdo/opcua#hasClientCert
-<http://example.org/sdo/opcua#hasClientCert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#comment> "The client certificate used to establish an OPC UA secure channel." .
-<http://example.org/sdo/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#label> "has client certificate" .
+# https://purl.org/signal-description-ontology/opcua#hasClientCert
+<https://purl.org/signal-description-ontology/opcua#hasClientCert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#comment> "The client certificate used to establish an OPC UA secure channel." .
+<https://purl.org/signal-description-ontology/opcua#hasClientCert> <http://www.w3.org/2000/01/rdf-schema#label> "has client certificate" .
 # 
-# http://example.org/sdo/opcua#hasClientPrivateKey
-<http://example.org/sdo/opcua#hasClientPrivateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The client's private key used to establish an OPC UA secure channel." .
-<http://example.org/sdo/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#label> "has client private key" .
+# https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey
+<https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The client's private key used to establish an OPC UA secure channel." .
+<https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey> <http://www.w3.org/2000/01/rdf-schema#label> "has client private key" .
 # 
-# http://example.org/sdo/opcua#hasIdentifier
-<http://example.org/sdo/opcua#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaAccess> .
-<http://example.org/sdo/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://example.org/sdo/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier used in node IDs." .
-<http://example.org/sdo/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier" .
+# https://purl.org/signal-description-ontology/opcua#hasIdentifier
+<https://purl.org/signal-description-ontology/opcua#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
+<https://purl.org/signal-description-ontology/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://purl.org/signal-description-ontology/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier used in node IDs." .
+<https://purl.org/signal-description-ontology/opcua#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier" .
 # 
-# http://example.org/sdo/opcua#hasMode
-<http://example.org/sdo/opcua#hasMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+# https://purl.org/signal-description-ontology/opcua#hasMode
+<https://purl.org/signal-description-ontology/opcua#hasMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
 _:genid5 <http://www.w3.org/2002/07/owl#oneOf> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "SignAndEncrypt"^^<http://example.org/sdo/opcua#mode> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "SignAndEncrypt"^^<https://purl.org/signal-description-ontology/opcua#mode> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Sign"^^<http://example.org/sdo/opcua#mode> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Sign"^^<https://purl.org/signal-description-ontology/opcua#mode> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://example.org/sdo/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#comment> "A enumeration that defines the message security mode." .
-<http://example.org/sdo/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#label> "has mode" .
+<https://purl.org/signal-description-ontology/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#comment> "A enumeration that defines the message security mode." .
+<https://purl.org/signal-description-ontology/opcua#hasMode> <http://www.w3.org/2000/01/rdf-schema#label> "has mode" .
 # 
-# http://example.org/sdo/opcua#hasNamespaceIndex
-<http://example.org/sdo/opcua#hasNamespaceIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaAccess> .
-<http://example.org/sdo/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://example.org/sdo/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The namespace index used in node IDs." .
-<http://example.org/sdo/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#label> "has namespace index" .
+# https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The namespace index used in node IDs." .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex> <http://www.w3.org/2000/01/rdf-schema#label> "has namespace index" .
 # 
-# http://example.org/sdo/opcua#hasNamespaceURI
-<http://example.org/sdo/opcua#hasNamespaceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaAccess> .
-<http://example.org/sdo/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "The URI of the namespace used in expanded node IDs." .
-<http://example.org/sdo/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#label> "has namespace URI" .
+# https://purl.org/signal-description-ontology/opcua#hasNamespaceURI
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "The URI of the namespace used in expanded node IDs." .
+<https://purl.org/signal-description-ontology/opcua#hasNamespaceURI> <http://www.w3.org/2000/01/rdf-schema#label> "has namespace URI" .
 # 
-# http://example.org/sdo/opcua#hasSecurityPolicy
-<http://example.org/sdo/opcua#hasSecurityPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/sdo/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the security policy profile defining the cryptographic algorithms for OPC UA message security." .
-<http://example.org/sdo/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "has security policy" .
+# https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy
+<https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the security policy profile defining the cryptographic algorithms for OPC UA message security." .
+<https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "has security policy" .
 # 
-# http://example.org/sdo/opcua#hasServerCert
-<http://example.org/sdo/opcua#hasServerCert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#MessageSecurity> .
-<http://example.org/sdo/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<http://example.org/sdo/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#comment> "The server certificate used to establish an OPC UA secure channel." .
-<http://example.org/sdo/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#label> "has server certificate" .
+# https://purl.org/signal-description-ontology/opcua#hasServerCert
+<https://purl.org/signal-description-ontology/opcua#hasServerCert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#MessageSecurity> .
+<https://purl.org/signal-description-ontology/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://purl.org/signal-description-ontology/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#comment> "The server certificate used to establish an OPC UA secure channel." .
+<https://purl.org/signal-description-ontology/opcua#hasServerCert> <http://www.w3.org/2000/01/rdf-schema#label> "has server certificate" .
 # 
-# http://example.org/sdo/opcua#hasServerIndex
-<http://example.org/sdo/opcua#hasServerIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/sdo/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/sdo/opcua#OpcUaAccess> .
-<http://example.org/sdo/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://example.org/sdo/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The server index used in expanded node IDs." .
-<http://example.org/sdo/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#label> "has server index" .
+# https://purl.org/signal-description-ontology/opcua#hasServerIndex
+<https://purl.org/signal-description-ontology/opcua#hasServerIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purl.org/signal-description-ontology/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
+<https://purl.org/signal-description-ontology/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://purl.org/signal-description-ontology/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The server index used in expanded node IDs." .
+<https://purl.org/signal-description-ontology/opcua#hasServerIndex> <http://www.w3.org/2000/01/rdf-schema#label> "has server index" .
 # 
 # 
 # 
@@ -436,125 +436,125 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://example.org/sdo/core#Asset
-<http://example.org/sdo/core#Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a physical or logical object that provides signals or contains other assets." .
-<http://example.org/sdo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset" .
+# https://purl.org/signal-description-ontology/core#Asset
+<https://purl.org/signal-description-ontology/core#Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a physical or logical object that provides signals or contains other assets." .
+<https://purl.org/signal-description-ontology/core#Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset" .
 # 
-# http://example.org/sdo/core#CertCredentials
-<http://example.org/sdo/core#CertCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#CertCredentials> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#Credentials> .
-<http://example.org/sdo/core#CertCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents authentication using certificates." .
-<http://example.org/sdo/core#CertCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "Cert Credentials" .
+# https://purl.org/signal-description-ontology/core#CertCredentials
+<https://purl.org/signal-description-ontology/core#CertCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#CertCredentials> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#Credentials> .
+<https://purl.org/signal-description-ontology/core#CertCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents authentication using certificates." .
+<https://purl.org/signal-description-ontology/core#CertCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "Cert Credentials" .
 # 
-# http://example.org/sdo/core#ConnectionInfo
-<http://example.org/sdo/core#ConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#ConnectionInfo> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid9 .
+# https://purl.org/signal-description-ontology/core#ConnectionInfo
+<https://purl.org/signal-description-ontology/core#ConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#ConnectionInfo> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/opcua#OpcUaConnectionInfo> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/influxdb#InfluxDbConnectionInfo> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://example.org/sdo/core#ConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to connect to a source." .
-<http://example.org/sdo/core#ConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Info" .
+<https://purl.org/signal-description-ontology/core#ConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to connect to a source." .
+<https://purl.org/signal-description-ontology/core#ConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Info" .
 # 
-# http://example.org/sdo/core#Credentials
-<http://example.org/sdo/core#Credentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#Credentials> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid12 .
+# https://purl.org/signal-description-ontology/core#Credentials
+<https://purl.org/signal-description-ontology/core#Credentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#Credentials> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/core#UserPassCredentials> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/core#UserPassCredentials> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/core#TokenCredentials> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/core#TokenCredentials> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/core#CertCredentials> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/core#CertCredentials> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://example.org/sdo/core#Credentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Serves as supertype for different authentication methods." .
-<http://example.org/sdo/core#Credentials> <http://www.w3.org/2000/01/rdf-schema#label> "Credentials" .
+<https://purl.org/signal-description-ontology/core#Credentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Serves as supertype for different authentication methods." .
+<https://purl.org/signal-description-ontology/core#Credentials> <http://www.w3.org/2000/01/rdf-schema#label> "Credentials" .
 # 
-# http://example.org/sdo/core#DataAccess
-<http://example.org/sdo/core#DataAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#DataAccess> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid14 .
+# https://purl.org/signal-description-ontology/core#DataAccess
+<https://purl.org/signal-description-ontology/core#DataAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#DataAccess> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/opcua#OpcUaAccess> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/opcua#OpcUaAccess> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/influxdb#InfluxDbAccess> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://example.org/sdo/core#DataAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Serves as supertype for technology-specific types of data access, used to obtain signal values." .
-<http://example.org/sdo/core#DataAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Data Access" .
+<https://purl.org/signal-description-ontology/core#DataAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Serves as supertype for technology-specific types of data access, used to obtain signal values." .
+<https://purl.org/signal-description-ontology/core#DataAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Data Access" .
 # 
-# http://example.org/sdo/core#KeyValuePair
-<http://example.org/sdo/core#KeyValuePair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#KeyValuePair> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid16 .
+# https://purl.org/signal-description-ontology/core#KeyValuePair
+<https://purl.org/signal-description-ontology/core#KeyValuePair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#KeyValuePair> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:genid16 .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/influxdb#Tag> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/influxdb#Tag> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/sdo/core#MetaData> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purl.org/signal-description-ontology/core#MetaData> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://example.org/sdo/core#KeyValuePair> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents data the in form of a key and a value." .
-<http://example.org/sdo/core#KeyValuePair> <http://www.w3.org/2000/01/rdf-schema#label> "Key-Value Pair" .
+<https://purl.org/signal-description-ontology/core#KeyValuePair> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents data the in form of a key and a value." .
+<https://purl.org/signal-description-ontology/core#KeyValuePair> <http://www.w3.org/2000/01/rdf-schema#label> "Key-Value Pair" .
 # 
-# http://example.org/sdo/core#MetaData
-<http://example.org/sdo/core#MetaData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#MetaData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#KeyValuePair> .
-<http://example.org/sdo/core#MetaData> <http://www.w3.org/2000/01/rdf-schema#comment> "A key-value pair that adds information about a signal." .
-<http://example.org/sdo/core#MetaData> <http://www.w3.org/2000/01/rdf-schema#label> "Meta Data" .
+# https://purl.org/signal-description-ontology/core#MetaData
+<https://purl.org/signal-description-ontology/core#MetaData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#MetaData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#KeyValuePair> .
+<https://purl.org/signal-description-ontology/core#MetaData> <http://www.w3.org/2000/01/rdf-schema#comment> "A key-value pair that adds information about a signal." .
+<https://purl.org/signal-description-ontology/core#MetaData> <http://www.w3.org/2000/01/rdf-schema#label> "Meta Data" .
 # 
-# http://example.org/sdo/core#SignalDescription
-<http://example.org/sdo/core#SignalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#SignalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information to enable interpretation and data access of a signal." .
-<http://example.org/sdo/core#SignalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Signal Description" .
+# https://purl.org/signal-description-ontology/core#SignalDescription
+<https://purl.org/signal-description-ontology/core#SignalDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#SignalDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information to enable interpretation and data access of a signal." .
+<https://purl.org/signal-description-ontology/core#SignalDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Signal Description" .
 # 
-# http://example.org/sdo/core#TokenCredentials
-<http://example.org/sdo/core#TokenCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#TokenCredentials> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#Credentials> .
-<http://example.org/sdo/core#TokenCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents authentication based on tokens." .
-<http://example.org/sdo/core#TokenCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "Token Credentials" .
+# https://purl.org/signal-description-ontology/core#TokenCredentials
+<https://purl.org/signal-description-ontology/core#TokenCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#TokenCredentials> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#Credentials> .
+<https://purl.org/signal-description-ontology/core#TokenCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents authentication based on tokens." .
+<https://purl.org/signal-description-ontology/core#TokenCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "Token Credentials" .
 # 
-# http://example.org/sdo/core#UserPassCredentials
-<http://example.org/sdo/core#UserPassCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/core#UserPassCredentials> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#Credentials> .
-<http://example.org/sdo/core#UserPassCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents authentication based on username and password." .
-<http://example.org/sdo/core#UserPassCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "User Pass Credentials" .
+# https://purl.org/signal-description-ontology/core#UserPassCredentials
+<https://purl.org/signal-description-ontology/core#UserPassCredentials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/core#UserPassCredentials> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#Credentials> .
+<https://purl.org/signal-description-ontology/core#UserPassCredentials> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents authentication based on username and password." .
+<https://purl.org/signal-description-ontology/core#UserPassCredentials> <http://www.w3.org/2000/01/rdf-schema#label> "User Pass Credentials" .
 # 
-# http://example.org/sdo/influxdb#InfluxDbAccess
-<http://example.org/sdo/influxdb#InfluxDbAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/influxdb#InfluxDbAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#DataAccess> .
-<http://example.org/sdo/influxdb#InfluxDbAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information used to query InfluxDB points." .
-<http://example.org/sdo/influxdb#InfluxDbAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Influx Db Access" .
+# https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#DataAccess> .
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information used to query InfluxDB points." .
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Influx Db Access" .
 # 
-# http://example.org/sdo/influxdb#InfluxDbConnectionInfo
-<http://example.org/sdo/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#ConnectionInfo> .
-<http://example.org/sdo/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to connect to an InfluxDB server." .
-<http://example.org/sdo/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Influx Db Connection Info" .
+# https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#ConnectionInfo> .
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to connect to an InfluxDB server." .
+<https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Influx Db Connection Info" .
 # 
-# http://example.org/sdo/influxdb#Tag
-<http://example.org/sdo/influxdb#Tag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/influxdb#Tag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#KeyValuePair> .
-<http://example.org/sdo/influxdb#Tag> <http://www.w3.org/2000/01/rdf-schema#comment> "A key-value pair used to query points in InfluxDB." .
-<http://example.org/sdo/influxdb#Tag> <http://www.w3.org/2000/01/rdf-schema#label> "Tag" .
+# https://purl.org/signal-description-ontology/influxdb#Tag
+<https://purl.org/signal-description-ontology/influxdb#Tag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/influxdb#Tag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#KeyValuePair> .
+<https://purl.org/signal-description-ontology/influxdb#Tag> <http://www.w3.org/2000/01/rdf-schema#comment> "A key-value pair used to query points in InfluxDB." .
+<https://purl.org/signal-description-ontology/influxdb#Tag> <http://www.w3.org/2000/01/rdf-schema#label> "Tag" .
 # 
-# http://example.org/sdo/opcua#MessageSecurity
-<http://example.org/sdo/opcua#MessageSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/opcua#MessageSecurity> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to establish a secure channel in OPC UA." .
-<http://example.org/sdo/opcua#MessageSecurity> <http://www.w3.org/2000/01/rdf-schema#label> "Message Security" .
+# https://purl.org/signal-description-ontology/opcua#MessageSecurity
+<https://purl.org/signal-description-ontology/opcua#MessageSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/opcua#MessageSecurity> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to establish a secure channel in OPC UA." .
+<https://purl.org/signal-description-ontology/opcua#MessageSecurity> <http://www.w3.org/2000/01/rdf-schema#label> "Message Security" .
 # 
-# http://example.org/sdo/opcua#OpcUaAccess
-<http://example.org/sdo/opcua#OpcUaAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/opcua#OpcUaAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#DataAccess> .
-<http://example.org/sdo/opcua#OpcUaAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information used to access OPC UA nodes." .
-<http://example.org/sdo/opcua#OpcUaAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Opc Ua Access" .
+# https://purl.org/signal-description-ontology/opcua#OpcUaAccess
+<https://purl.org/signal-description-ontology/opcua#OpcUaAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/opcua#OpcUaAccess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#DataAccess> .
+<https://purl.org/signal-description-ontology/opcua#OpcUaAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information used to access OPC UA nodes." .
+<https://purl.org/signal-description-ontology/opcua#OpcUaAccess> <http://www.w3.org/2000/01/rdf-schema#label> "Opc Ua Access" .
 # 
-# http://example.org/sdo/opcua#OpcUaConnectionInfo
-<http://example.org/sdo/opcua#OpcUaConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/sdo/opcua#OpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/sdo/core#ConnectionInfo> .
-<http://example.org/sdo/opcua#OpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to connect to an OPC UA server." .
-<http://example.org/sdo/opcua#OpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Opc Ua Connection Info" .
+# https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo
+<https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purl.org/signal-description-ontology/core#ConnectionInfo> .
+<https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the information required to connect to an OPC UA server." .
+<https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "Opc Ua Connection Info" .
 # 
 # http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

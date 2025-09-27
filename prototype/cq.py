@@ -14,7 +14,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
 SELECT ?type
 WHERE {
@@ -36,8 +36,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX opcua: <http://example.org/sdo/opcua#>
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?policy ?mode
 WHERE {
@@ -58,8 +58,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#> 
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#> 
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?password
 WHERE {
@@ -80,8 +80,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?cert ?pk
 WHERE {
@@ -102,7 +102,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
 SELECT ?token
 WHERE {
@@ -123,7 +123,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
 SELECT ?url
 WHERE {
@@ -145,8 +145,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX opcua: <http://example.org/sdo/opcua#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
 
 SELECT ?sd
 WHERE {
@@ -167,8 +167,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX influxdb: <http://example.org/sdo/influxdb#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
 
 SELECT ?sd
 WHERE {
@@ -189,7 +189,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
 SELECT ?sd
 WHERE {
@@ -209,8 +209,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX opcua: <http://example.org/sdo/opcua#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
 
 SELECT ?sd
 WHERE {
@@ -231,8 +231,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?sd ?st
 WHERE {
@@ -252,8 +252,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?unit ?dt
 WHERE {
@@ -273,8 +273,8 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?key ?value
 WHERE {
@@ -296,9 +296,9 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#> 
-PREFIX influxdb: <http://example.org/sdo/influxdb#>
-PREFIX : <http://example.org/sdo/abox#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#> 
+PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
+PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
 SELECT ?key ?value
 WHERE {
@@ -321,7 +321,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
 SELECT ?top
 WHERE {
@@ -341,7 +341,7 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-PREFIX core: <http://example.org/sdo/core#>
+PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
 SELECT ?leaf
 WHERE {
@@ -357,7 +357,7 @@ WHERE {
 def cq15(g):
     # Traverse rdf:rest property and get rdf:first value
     q = """
-    PREFIX core: <http://example.org/sdo/core#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
     SELECT ?value
     WHERE {
@@ -373,7 +373,7 @@ def cq15(g):
 # What MessageSecurityModes can be assigned?
 def cq16(g):
     q = """
-    PREFIX opcua: <http://example.org/sdo/opcua#>
+    PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
 
     SELECT ?value
     WHERE {

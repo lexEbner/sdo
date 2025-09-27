@@ -5,13 +5,13 @@
   } ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
-      "@type" : "http://example.org/sdo/core#signalType",
+      "@type" : "https://purl.org/signal-description-ontology/core#signalType",
       "@value" : "HoldObservations"
     }, {
-      "@type" : "http://example.org/sdo/core#signalType",
+      "@type" : "https://purl.org/signal-description-ontology/core#signalType",
       "@value" : "LinearInterpolation"
     }, {
-      "@type" : "http://example.org/sdo/core#signalType",
+      "@type" : "https://purl.org/signal-description-ontology/core#signalType",
       "@value" : "Observations"
     } ]
   } ]
@@ -22,15 +22,15 @@
   } ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
-      "@type" : "http://example.org/sdo/opcua#mode",
+      "@type" : "https://purl.org/signal-description-ontology/opcua#mode",
       "@value" : "Sign"
     }, {
-      "@type" : "http://example.org/sdo/opcua#mode",
+      "@type" : "https://purl.org/signal-description-ontology/opcua#mode",
       "@value" : "SignAndEncrypt"
     } ]
   } ]
 }, {
-  "@id" : "http://example.org/sdo#",
+  "@id" : "https://purl.org/signal-description-ontology#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -57,7 +57,7 @@
     "@id" : "https://chowlk.linkeddata.es/"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#Asset",
+  "@id" : "https://purl.org/signal-description-ontology/core#Asset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Represents a physical or logical object that provides signals or contains other assets."
@@ -66,7 +66,7 @@
     "@value" : "Asset"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#CertCredentials",
+  "@id" : "https://purl.org/signal-description-ontology/core#CertCredentials",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Represents authentication using certificates."
@@ -75,10 +75,10 @@
     "@value" : "Cert Credentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#Credentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#Credentials"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#ConnectionInfo",
+  "@id" : "https://purl.org/signal-description-ontology/core#ConnectionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information required to connect to a source."
@@ -88,13 +88,13 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/sdo/influxdb#InfluxDbConnectionInfo"
+      "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo"
     }, {
-      "@id" : "http://example.org/sdo/opcua#OpcUaConnectionInfo"
+      "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo"
     } ]
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#Credentials",
+  "@id" : "https://purl.org/signal-description-ontology/core#Credentials",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Serves as supertype for different authentication methods."
@@ -104,15 +104,15 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/sdo/core#CertCredentials"
+      "@id" : "https://purl.org/signal-description-ontology/core#CertCredentials"
     }, {
-      "@id" : "http://example.org/sdo/core#TokenCredentials"
+      "@id" : "https://purl.org/signal-description-ontology/core#TokenCredentials"
     }, {
-      "@id" : "http://example.org/sdo/core#UserPassCredentials"
+      "@id" : "https://purl.org/signal-description-ontology/core#UserPassCredentials"
     } ]
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#DataAccess",
+  "@id" : "https://purl.org/signal-description-ontology/core#DataAccess",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Serves as supertype for technology-specific types of data access, used to obtain signal values."
@@ -122,13 +122,13 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+      "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
     }, {
-      "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+      "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
     } ]
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#KeyValuePair",
+  "@id" : "https://purl.org/signal-description-ontology/core#KeyValuePair",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Represents data the in form of a key and a value."
@@ -138,13 +138,13 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointUnionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/sdo/core#MetaData"
+      "@id" : "https://purl.org/signal-description-ontology/core#MetaData"
     }, {
-      "@id" : "http://example.org/sdo/influxdb#Tag"
+      "@id" : "https://purl.org/signal-description-ontology/influxdb#Tag"
     } ]
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#MetaData",
+  "@id" : "https://purl.org/signal-description-ontology/core#MetaData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A key-value pair that adds information about a signal."
@@ -153,10 +153,10 @@
     "@value" : "Meta Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#KeyValuePair"
+    "@id" : "https://purl.org/signal-description-ontology/core#KeyValuePair"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#SignalDescription",
+  "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information to enable interpretation and data access of a signal."
@@ -165,7 +165,7 @@
     "@value" : "Signal Description"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#TokenCredentials",
+  "@id" : "https://purl.org/signal-description-ontology/core#TokenCredentials",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Represents authentication based on tokens."
@@ -174,10 +174,10 @@
     "@value" : "Token Credentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#Credentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#Credentials"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#UserPassCredentials",
+  "@id" : "https://purl.org/signal-description-ontology/core#UserPassCredentials",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Represents authentication based on username and password."
@@ -186,31 +186,31 @@
     "@value" : "User Pass Credentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#Credentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#Credentials"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasAsset",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasAsset",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links an Asset to another Asset it contains to."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#Asset"
+    "@id" : "https://purl.org/signal-description-ontology/core#Asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#Asset"
+    "@id" : "https://purl.org/signal-description-ontology/core#Asset"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasCert",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasCert",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The certificate used for certificate-based authentication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#CertCredentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#CertCredentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has certificate"
@@ -219,28 +219,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasCredentials",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasCredentials",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links Credentials to a ConnectionInfo providing it for authentication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#ConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/core#ConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has credentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#Credentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#Credentials"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasDataType",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasDataType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a Datatype to a SignalDescription it refers to."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has data type"
@@ -249,34 +249,34 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#isDataTypeOf"
+    "@id" : "https://purl.org/signal-description-ontology/core#isDataTypeOf"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasHistAccess",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasHistAccess",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links historical DataAccess to a SignalDescription providing it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has historical access"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#DataAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#DataAccess"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#isHistAccessOf"
+    "@id" : "https://purl.org/signal-description-ontology/core#isHistAccessOf"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasKey",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasKey",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The key of a key-value pair."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#KeyValuePair"
+    "@id" : "https://purl.org/signal-description-ontology/core#KeyValuePair"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has key"
@@ -285,43 +285,43 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasMetadata",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasMetadata",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a metadata to a SignalDescription described by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has metadata"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#MetaData"
+    "@id" : "https://purl.org/signal-description-ontology/core#MetaData"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasNrtAccess",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasNrtAccess",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links near real-time DataAccess to a SignalDescription providing it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has near real-time access"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#DataAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#DataAccess"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasPassword",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasPassword",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The password used for username-password credentials."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#UserPassCredentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#UserPassCredentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has password"
@@ -330,13 +330,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasPrivateKey",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasPrivateKey",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The private key used for certificate-based authentication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#CertCredentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#CertCredentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has private key"
@@ -345,31 +345,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasSignalDescription",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasSignalDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a SignalDescription to a Asset it contains to."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#Asset"
+    "@id" : "https://purl.org/signal-description-ontology/core#Asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has signal description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#isSignalDescriptionOf"
+    "@id" : "https://purl.org/signal-description-ontology/core#isSignalDescriptionOf"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasSignalType",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasSignalType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A enumeration that determines how values between the data samples are interpreted."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has signal type"
@@ -378,13 +378,13 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasToken",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasToken",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The token used for token-based authentication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#TokenCredentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#TokenCredentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has token"
@@ -393,13 +393,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasURL",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The URL of a connection."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#ConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/core#ConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has URL"
@@ -408,13 +408,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasUnit",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a Unit to a SignalDescription its values are measured by."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has unit"
@@ -423,16 +423,16 @@
     "@id" : "http://qudt.org/schema/qudt/Unit"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#isUnitOf"
+    "@id" : "https://purl.org/signal-description-ontology/core#isUnitOf"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasUsername",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasUsername",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The username used for username-password credentials."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#UserPassCredentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#UserPassCredentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has username"
@@ -441,13 +441,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#hasValue",
+  "@id" : "https://purl.org/signal-description-ontology/core#hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The value of a key-value pair."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#KeyValuePair"
+    "@id" : "https://purl.org/signal-description-ontology/core#KeyValuePair"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has value"
@@ -456,43 +456,43 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isAssetOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isAssetOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links an Asset to another Asset contained by it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#Asset"
+    "@id" : "https://purl.org/signal-description-ontology/core#Asset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is asset of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#Asset"
+    "@id" : "https://purl.org/signal-description-ontology/core#Asset"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#hasAsset"
+    "@id" : "https://purl.org/signal-description-ontology/core#hasAsset"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isCredentialsOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isCredentialsOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a ConnectionInfo to Credentials provided by it for authentication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#Credentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#Credentials"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is credentials of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#ConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/core#ConnectionInfo"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#hasCredentials"
+    "@id" : "https://purl.org/signal-description-ontology/core#hasCredentials"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isDataTypeOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isDataTypeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a SignalDescription to a Datatype referred by it."
@@ -504,76 +504,76 @@
     "@value" : "is data type of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isHistAccessOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isHistAccessOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links SignalDescription to historical DataAccess provided by it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#DataAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#DataAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is historical access of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isMetadataOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isMetadataOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a SignalDescription to a metadata describing it"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#MetaData"
+    "@id" : "https://purl.org/signal-description-ontology/core#MetaData"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is metadata of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#hasMetadata"
+    "@id" : "https://purl.org/signal-description-ontology/core#hasMetadata"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isNrtAccessOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isNrtAccessOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links SignalDescription to near real-time DataAccess provided by it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#DataAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#DataAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is near real-time access of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/core#hasNrtAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#hasNrtAccess"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isSignalDescriptionOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isSignalDescriptionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links an Asset to a SignalDescription contained by it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is signal description of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#Asset"
+    "@id" : "https://purl.org/signal-description-ontology/core#Asset"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#isUnitOf",
+  "@id" : "https://purl.org/signal-description-ontology/core#isUnitOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a SignalDescription to a Unit measuring it."
@@ -585,15 +585,15 @@
     "@value" : "is unit of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/core#SignalDescription"
+    "@id" : "https://purl.org/signal-description-ontology/core#SignalDescription"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/core#signalType",
+  "@id" : "https://purl.org/signal-description-ontology/core#signalType",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information used to query InfluxDB points."
@@ -602,10 +602,10 @@
     "@value" : "Influx Db Access"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#DataAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#DataAccess"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#InfluxDbConnectionInfo",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information required to connect to an InfluxDB server."
@@ -614,10 +614,10 @@
     "@value" : "Influx Db Connection Info"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#ConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/core#ConnectionInfo"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#Tag",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#Tag",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A key-value pair used to query points in InfluxDB."
@@ -626,16 +626,16 @@
     "@value" : "Tag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#KeyValuePair"
+    "@id" : "https://purl.org/signal-description-ontology/core#KeyValuePair"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#hasBucket",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#hasBucket",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The bucket name in InfluxDB."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has bucket"
@@ -644,13 +644,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#hasField",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#hasField",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The field key in InfluxDB."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has field"
@@ -659,31 +659,31 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#hasInfluxDbConnectionInfo",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#hasInfluxDbConnectionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links connection information to InfluxDB Access requiring it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has InfluxDB connection information"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#hasMeasurement",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#hasMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The measurement name in InfluxDB."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has measurement"
@@ -692,13 +692,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#hasOrganization",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#hasOrganization",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The organization name in InfluxDB."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has organization"
@@ -707,55 +707,55 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#hasTag",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#hasTag",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links a Tag identifying a point to InfluxDB Access."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has tag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/influxdb#Tag"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#Tag"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#isInfluxDbConnectionInfoOf",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#isInfluxDbConnectionInfoOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links InfluxDB Access to connection information required by it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is InfluxDB connection information of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/influxdb#isTagOf",
+  "@id" : "https://purl.org/signal-description-ontology/influxdb#isTagOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links InfluxDB Access to a Tag identifying a point."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/influxdb#Tag"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#Tag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is tag of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/influxdb#InfluxDbAccess"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#InfluxDbAccess"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/influxdb#hasTag"
+    "@id" : "https://purl.org/signal-description-ontology/influxdb#hasTag"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#MessageSecurity",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information required to establish a secure channel in OPC UA."
@@ -764,7 +764,7 @@
     "@value" : "Message Security"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#OpcUaAccess",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information used to access OPC UA nodes."
@@ -773,10 +773,10 @@
     "@value" : "Opc Ua Access"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#DataAccess"
+    "@id" : "https://purl.org/signal-description-ontology/core#DataAccess"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#OpcUaConnectionInfo",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Contains the information required to connect to an OPC UA server."
@@ -785,16 +785,16 @@
     "@value" : "Opc Ua Connection Info"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/sdo/core#ConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/core#ConnectionInfo"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasClientCert",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasClientCert",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The client certificate used to establish an OPC UA secure channel."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has client certificate"
@@ -803,13 +803,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasClientPrivateKey",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasClientPrivateKey",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The client's private key used to establish an OPC UA secure channel."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has client private key"
@@ -818,13 +818,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasIdentifier",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The identifier used in node IDs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has identifier"
@@ -833,31 +833,31 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasMessageSecurity",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasMessageSecurity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links MessageSecurity to OpcUaConnectionInfo requiring it for secure communication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has message security"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/opcua#isMessageSecurityOf"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasMode",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasMode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A enumeration that defines the message security mode."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has mode"
@@ -866,13 +866,13 @@
     "@id" : "_:genid5"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasNamespaceIndex",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasNamespaceIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The namespace index used in node IDs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has namespace index"
@@ -881,13 +881,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasNamespaceURI",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasNamespaceURI",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The URI of the namespace used in expanded node IDs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has namespace URI"
@@ -896,28 +896,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasOpcUaConnectionInfo",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links connection information to OPC UA Access requiring it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has OPC UA connection information"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasSecurityPolicy",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasSecurityPolicy",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The name of the security policy profile defining the cryptographic algorithms for OPC UA message security."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has security policy"
@@ -926,13 +926,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasServerCert",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasServerCert",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The server certificate used to establish an OPC UA secure channel."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has server certificate"
@@ -941,13 +941,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#hasServerIndex",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#hasServerIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The server index used in expanded node IDs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has server index"
@@ -956,40 +956,40 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#isMessageSecurityOf",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#isMessageSecurityOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links OpcUaConnectionInfo to MessageSecurity required by it for secure communication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#MessageSecurity"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#MessageSecurity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is message security of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#isOpcUaConnectionInfoOf",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#isOpcUaConnectionInfoOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Links OPC UA Access to connection information required by it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaConnectionInfo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "is OPC UA connection information of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/sdo/opcua#OpcUaAccess"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#OpcUaAccess"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://example.org/sdo/opcua#hasOpcUaConnectionInfo"
+    "@id" : "https://purl.org/signal-description-ontology/opcua#hasOpcUaConnectionInfo"
   } ]
 }, {
-  "@id" : "http://example.org/sdo/opcua#mode",
+  "@id" : "https://purl.org/signal-description-ontology/opcua#mode",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
   } ]

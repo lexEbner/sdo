@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------
   OPC UA
 ---------------------------------------------------------------------------
-http://example.org/sdo/abox#Line2_UnitsPerBatch: ns=2;i=112001
+https://purl.org/signal-description-ontology/abox#Line2_UnitsPerBatch: ns=2;i=112001
 [
   {
     "Value": 116,
@@ -22,7 +22,7 @@ http://example.org/sdo/abox#Line2_UnitsPerBatch: ns=2;i=112001
     "ServerPicosec": "None"
   }
 ]
-http://example.org/sdo/abox#Press_MaterialTemperature: ns=2;i=111201
+https://purl.org/signal-description-ontology/abox#Press_MaterialTemperature: ns=2;i=111201
 [
   {
     "Value": 203.4600067138672,
@@ -43,7 +43,7 @@ http://example.org/sdo/abox#Press_MaterialTemperature: ns=2;i=111201
     "ServerPicosec": "None"
   }
 ]
-http://example.org/sdo/abox#Press_Pressure: ns=2;i=111202
+https://purl.org/signal-description-ontology/abox#Press_Pressure: ns=2;i=111202
 [
   {
     "Value": 124.5999984741211,
@@ -64,7 +64,7 @@ http://example.org/sdo/abox#Press_Pressure: ns=2;i=111202
     "ServerPicosec": "None"
   }
 ]
-http://example.org/sdo/abox#Cutter_BladeSpeed: ns=2;i=111301
+https://purl.org/signal-description-ontology/abox#Cutter_BladeSpeed: ns=2;i=111301
 [
   {
     "Value": 3343.0,
@@ -85,7 +85,7 @@ http://example.org/sdo/abox#Cutter_BladeSpeed: ns=2;i=111301
     "ServerPicosec": "None"
   }
 ]
-http://example.org/sdo/abox#Cutter_Pressure: ns=2;i=111302
+https://purl.org/signal-description-ontology/abox#Cutter_Pressure: ns=2;i=111302
 [
   {
     "Value": 120.0,

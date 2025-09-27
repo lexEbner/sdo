@@ -1,4 +1,4 @@
-@prefix : <http://example.org/sdo#> .
+@prefix : <https://purl.org/signal-description-ontology#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,13 +6,13 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
-@prefix sdo: <http://example.org/sdo#> .
-@prefix core: <http://example.org/sdo/core#> .
-@prefix opcua: <http://example.org/sdo/opcua#> .
-@prefix influxdb: <http://example.org/sdo/influxdb#> .
-@base <http://example.org/sdo#> .
+@prefix sdo: <https://purl.org/signal-description-ontology#> .
+@prefix core: <https://purl.org/signal-description-ontology/core#> .
+@prefix opcua: <https://purl.org/signal-description-ontology/opcua#> .
+@prefix influxdb: <https://purl.org/signal-description-ontology/influxdb#> .
+@base <https://purl.org/signal-description-ontology#> .
 
-<http://example.org/sdo#> a owl:Ontology ;
+<https://purl.org/signal-description-ontology#> a owl:Ontology ;
     dcterms:created "2025-09-25"^^xsd:date ;
     dcterms:creator "http://example.org/people#AlexanderEbner" ;
     dcterms:description "An ontology for integrating data sources providing time series data based on signal descriptions."@en ;

@@ -19,8 +19,8 @@ from rdflib import Graph, XSD
 
 def get_influxdb_connection(g, url):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX influxdb: <http://example.org/sdo/influxdb#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
 
     SELECT ?connection
     WHERE {{
@@ -34,7 +34,7 @@ def get_influxdb_connection(g, url):
 
 def get_token(g, connection):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
 
     SELECT ?token
     WHERE {{
@@ -48,8 +48,8 @@ def get_token(g, connection):
 
 def get_bucket(g, influxdb_connection):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX influxdb: <http://example.org/sdo/influxdb#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
 
     SELECT ?bucket
     WHERE {{
@@ -63,8 +63,8 @@ def get_bucket(g, influxdb_connection):
 
 def get_organization(g, influxdb_connection):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX influxdb: <http://example.org/sdo/influxdb#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
 
     SELECT ?org
     WHERE {{
@@ -78,8 +78,8 @@ def get_organization(g, influxdb_connection):
 
 def get_signal_field_pairs(g, influxdb_connection, measurement):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX influxdb: <http://example.org/sdo/influxdb#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     SELECT ?signal ?field
@@ -96,9 +96,9 @@ def get_signal_field_pairs(g, influxdb_connection, measurement):
 
 def get_influxdb_tags(g, signal):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX influxdb: <http://example.org/sdo/influxdb#>
-    PREFIX : <http://example.org/sdo/abox#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
+    PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
     SELECT ?key ?value
     WHERE {{
@@ -130,9 +130,9 @@ def create_flux_query(bucket, measurement, tags, field, start=-8):
 
 def get_influx_point(g, signal):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX influxdb: <http://example.org/sdo/influxdb#>
-    PREFIX : <http://example.org/sdo/abox#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX influxdb: <https://purl.org/signal-description-ontology/influxdb#>
+    PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
     SELECT ?measurement ?field ?url ?bucket ?org ?stype
     WHERE {{
@@ -156,8 +156,8 @@ def get_influx_point(g, signal):
 
 def get_opcua_connection(g, url):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX opcua: <http://example.org/sdo/opcua#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
 
     SELECT ?connection
     WHERE {{
@@ -170,8 +170,8 @@ def get_opcua_connection(g, url):
 
 def get_password(g, connection, username):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX opcua: <http://example.org/sdo/opcua#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
 
     SELECT ?password
     WHERE {{
@@ -185,8 +185,8 @@ def get_password(g, connection, username):
 
 def get_hist_nodes(g, opcua_connection):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX opcua: <http://example.org/sdo/opcua#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
 
     SELECT ?asset_label ?signal_label ?uri ?id
     WHERE {{
@@ -220,9 +220,9 @@ def print_datavalues(records):
 
 def get_opcua_node(g, signal):
     sparql_query = """
-    PREFIX core: <http://example.org/sdo/core#>
-    PREFIX opcua: <http://example.org/sdo/opcua#>
-    PREFIX : <http://example.org/sdo/abox#>
+    PREFIX core: <https://purl.org/signal-description-ontology/core#>
+    PREFIX opcua: <https://purl.org/signal-description-ontology/opcua#>
+    PREFIX : <https://purl.org/signal-description-ontology/abox#>
 
     SELECT ?ns_uri ?id ?url ?stype
     WHERE {{
@@ -341,7 +341,7 @@ async def opcua_discovery(g):
                 id_type = "s"
             id_str = f"ns={idx};{id_type}={node["id"]}"
 
-            print(f"http://example.org/sdo/abox#{node["asset_label"]}_{node["signal_label"]}: {id_str}")
+            print(f"https://purl.org/signal-description-ontology/abox#{node["asset_label"]}_{node["signal_label"]}: {id_str}")
 
             hrv = ua.HistoryReadValueId()
             hrv.NodeId = ua.NodeId(node["id"], idx)

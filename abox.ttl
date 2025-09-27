@@ -1,7 +1,7 @@
-@prefix : <http://example.org/sdo/abox#> .
-@prefix core: <http://example.org/sdo/core#> .
-@prefix opcua: <http://example.org/sdo/opcua#> .
-@prefix influxdb: <http://example.org/sdo/influxdb#> .
+@prefix : <https://purl.org/signal-description-ontology/abox#> .
+@prefix core: <https://purl.org/signal-description-ontology/core#> .
+@prefix opcua: <https://purl.org/signal-description-ontology/opcua#> .
+@prefix influxdb: <https://purl.org/signal-description-ontology/influxdb#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/sdo/abox#> a owl:Ontology ;
-       owl:imports <http://example.org/sdo#> .
+<https://purl.org/signal-description-ontology/abox#> a owl:Ontology ;
+       owl:imports <https://purl.org/signal-description-ontology#> .
 
 #################################################################
 #    Tags
@@ -48,7 +48,7 @@
 #    ConnectionInformation
 #################################################################
 
-###  http://example.org/sdo#InfluxDbConnection1
+###  https://purl.org/signal-description-ontology#InfluxDbConnection1
 :InfluxDbConnection1 a influxdb:InfluxDbConnectionInfo ;
        core:hasURL "http://127.0.0.1:8086"^^xsd:anyURI  ;
        core:hasCredentials [
@@ -62,7 +62,7 @@ _:CertCredentials1 a core:CertCredentials ;
        core:hasCertURI "./certificates/client-certificate.der"^^xsd:anyURI ;
        core:hasPrivateKeyURI  "./certificates/client-private-key.pem"^^xsd:anyURI .
 
-###  http://example.org/sdo#OpcUaConnection1
+###  https://purl.org/signal-description-ontology#OpcUaConnection1
 :OpcUaConnection1 a opcua:OpcUaConnectionInfo ;
        core:hasURL "opc.tcp://127.0.0.1:4840/server1/"^^xsd:anyURI ;
        core:hasCredentials [
@@ -79,7 +79,7 @@ _:CertCredentials1 a core:CertCredentials ;
               opcua:hasClientCertCredentials _:CertCredentials1
        ] .
 
-###  http://example.org/sdo#OpcUaConnection2
+###  https://purl.org/signal-description-ontology#OpcUaConnection2
 :OpcUaConnection2 a opcua:OpcUaConnectionInfo ;
        core:hasURL "opc.tcp://127.0.0.1:4840/server2/"^^xsd:anyURI ;
        core:hasCredentials [
@@ -92,18 +92,18 @@ _:CertCredentials1 a core:CertCredentials ;
 #    Hierarchy Assets
 #################################################################
 
-###  http://example.org/sdo#FactoryVIE
+###  https://purl.org/signal-description-ontology#FactoryVIE
 :FactoryVIE a core:Asset ;
        rdfs:label "FactoryVIE" ;
        core:hasAsset :Room1 .
 
-###  http://example.org/sdo#Room1
+###  https://purl.org/signal-description-ontology#Room1
 :Room1 a core:Asset ;
        rdfs:label "Room1" ;
        core:hasAsset :Line1, :Line2 ;
        core:hasSignalDescription :Room1_Temperature .
 
-###  http://example.org/sdo#Room1_Temperature
+###  https://purl.org/signal-description-ontology#Room1_Temperature
 :Room1_Temperature a core:SignalDescription ;
        rdfs:label "Temperature" ;
        core:hasMetaData [
@@ -127,18 +127,18 @@ _:CertCredentials1 a core:CertCredentials ;
               influxdb:hasField "Temperature"
        ] .
 
-###  http://example.org/sdo#Line1
+###  https://purl.org/signal-description-ontology#Line1
 :Line1 a core:Asset ;
        rdfs:label "Line1" ;
        core:hasAsset :Cutter, :Extruder, :Press .
 
-###  http://example.org/sdo#Line2
+###  https://purl.org/signal-description-ontology#Line2
 :Line2 a core:Asset ;
        rdfs:label "Line2" ;
        core:hasAsset :Belt, :Trimmer ;
        core:hasSignalDescription :Line2_UnitsPerBatch .
 
-###  http://example.org/sdo#Line2_UnitsPerBatch
+###  https://purl.org/signal-description-ontology#Line2_UnitsPerBatch
 :Line2_UnitsPerBatch a core:SignalDescription ;
        rdfs:label "UnitsPerBatch" ;
        core:hasUnit unit:ONE ;
@@ -156,12 +156,12 @@ _:OpcUA_Prop5 a opcua:OpcUaAccess ;
 #    Extruder
 #################################################################
 
-###  http://example.org/sdo#Extruder
+###  https://purl.org/signal-description-ontology#Extruder
 :Extruder a core:Asset ;
        rdfs:label "Extruder" ;
        core:hasSignalDescription :Extruder_Temperature, :Extruder_Throughput .
 
-###  http://example.org/sdo#Extruder_Temperature
+###  https://purl.org/signal-description-ontology#Extruder_Temperature
 :Extruder_Temperature a core:SignalDescription ;
        rdfs:label "Temperature" ;
        core:hasMetaData [
@@ -191,7 +191,7 @@ _:OpcUA_Prop5 a opcua:OpcUaAccess ;
               influxdb:hasField "Temperature"
        ] .
 
-###  http://example.org/sdo#Extruder_Throughput
+###  https://purl.org/signal-description-ontology#Extruder_Throughput
 :Extruder_Throughput a core:SignalDescription ;
        rdfs:label "Throughput" ;
        core:hasMetaData [
@@ -226,12 +226,12 @@ _:OpcUA_Prop5 a opcua:OpcUaAccess ;
 #    Press
 #################################################################
 
-###  http://example.org/sdo#Press
+###  https://purl.org/signal-description-ontology#Press
 :Press a core:Asset ;
        rdfs:label "Press" ;
        core:hasSignalDescription :Press_MaterialTemperature, :Press_Pressure .
 
-###  http://example.org/sdo#Press_MaterialTemperature
+###  https://purl.org/signal-description-ontology#Press_MaterialTemperature
 :Press_MaterialTemperature a core:SignalDescription ;
        rdfs:label "MaterialTemperature" ;
        core:hasMetaData [
@@ -261,7 +261,7 @@ _:InfluxDB_Prop1 a influxdb:InfluxDbAccess ;
        influxdb:hasTag :Tag_FactoryVIE, :Tag_Room1, :Tag_Line1, :Tag_Press ;
        influxdb:hasField "MaterialTemperature" .
 
-###  http://example.org/sdo#Press_Pressure
+###  https://purl.org/signal-description-ontology#Press_Pressure
 :Press_Pressure a core:SignalDescription ;
        rdfs:label "Pressure" ;
        core:hasMetaData [
@@ -295,12 +295,12 @@ _:InfluxDB_Prop2 a influxdb:InfluxDbAccess ;
 #    Cutter
 #################################################################
 
-###  http://example.org/sdo#Cutter
+###  https://purl.org/signal-description-ontology#Cutter
 :Cutter a core:Asset ;
        rdfs:label "Cutter" ;
        core:hasSignalDescription :Cutter_BladeSpeed, :Cutter_Pressure .
 
-###  http://example.org/sdo#Cutter_BladeSpeed
+###  https://purl.org/signal-description-ontology#Cutter_BladeSpeed
 :Cutter_BladeSpeed a core:SignalDescription ;
        rdfs:label "BladeSpeed" ;
        core:hasMetaData [
@@ -324,7 +324,7 @@ _:OpcUA_Prop3 a opcua:OpcUaAccess ;
        opcua:hasNamespaceURI "http://example.org/opcua/" ;
        opcua:hasIdentifier "111301"^^xsd:integer .
 
-###  http://example.org/sdo#Cutter_Pressure
+###  https://purl.org/signal-description-ontology#Cutter_Pressure
 :Cutter_Pressure a core:SignalDescription ;
        rdfs:label "Pressure" ;
        core:hasMetaData [
@@ -352,12 +352,12 @@ _:OpcUA_Prop4 a opcua:OpcUaAccess ;
 #    Belt
 #################################################################
 
-###  http://example.org/sdo#Belt
+###  https://purl.org/signal-description-ontology#Belt
 :Belt a core:Asset ;
        rdfs:label "Belt" ;
        core:hasSignalDescription :Belt_Speed .
 
-###  http://example.org/sdo#Belt_Speed
+###  https://purl.org/signal-description-ontology#Belt_Speed
 :Belt_Speed a core:SignalDescription ;
        rdfs:label "Speed" ;
        core:hasMetaData [
@@ -384,12 +384,12 @@ _:OpcUA_Prop4 a opcua:OpcUaAccess ;
 #    Trimmer
 #################################################################
 
-###  http://example.org/sdo#Trimmer
+###  https://purl.org/signal-description-ontology#Trimmer
 :Trimmer a core:Asset ;
        rdfs:label "Trimmer" ;
        core:hasSignalDescription :Trimmer_Speed, :Trimmer_Pressure, :Trimmer_ZPosition .
 
-###  http://example.org/sdo#Trimmer_Speed
+###  https://purl.org/signal-description-ontology#Trimmer_Speed
 :Trimmer_Speed a core:SignalDescription ;
        rdfs:label "Speed" ;
        core:hasMetaData [
@@ -406,7 +406,7 @@ _:OpcUA_Prop4 a opcua:OpcUaAccess ;
        core:hasDatatype xsd:double ;
        core:hasSignalType "LinearInterpolation"^^core:signalType .
 
-###  http://example.org/sdo#Trimmer_Pressure
+###  https://purl.org/signal-description-ontology#Trimmer_Pressure
 :Trimmer_Pressure a core:SignalDescription ;
        rdfs:label "Pressure" ;
        core:hasMetaData [
@@ -430,7 +430,7 @@ _:OpcUA_Prop4 a opcua:OpcUaAccess ;
               influxdb:hasField "Pressure"
        ] .
 
-###  http://example.org/sdo#Trimmer_ZPosition
+###  https://purl.org/signal-description-ontology#Trimmer_ZPosition
 :Trimmer_ZPosition a core:SignalDescription ;
        rdfs:label "ZPosition" ;
        core:hasMetaData [
@@ -458,12 +458,12 @@ _:OpcUA_Prop4 a opcua:OpcUaAccess ;
 #    Centrifuge
 #################################################################
 
-###  http://example.org/sdo#Centrifuge
+###  https://purl.org/signal-description-ontology#Centrifuge
 :Centrifuge a core:Asset ;
        rdfs:label "Centrifuge" ;
        core:hasSignalDescription :Centrifuge_Speed, :Centrifuge_Acceleration .
 
-###  http://example.org/sdo#Centrifuge_Speed
+###  https://purl.org/signal-description-ontology#Centrifuge_Speed
 :Centrifuge_Speed a core:SignalDescription ;
        rdfs:label "Speed" ;
        core:hasUnit unit:REV-PER-MIN ;
@@ -477,7 +477,7 @@ _:OpcUA_Prop4 a opcua:OpcUaAccess ;
               opcua:hasIdentifier "Centrifuge_Speed"
        ] .
 
-###  http://example.org/sdo#Centrifuge_Acceleration
+###  https://purl.org/signal-description-ontology#Centrifuge_Acceleration
 :Centrifuge_Acceleration a core:SignalDescription ;
        rdfs:label "Acceleration" ;
        core:hasUnit unit:REV-PER-MIN-SEC ;
